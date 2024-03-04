@@ -1,3 +1,3 @@
-# give me a name
+# BeatSpin
 
-i'm a project without a description.
+This is now the description.
