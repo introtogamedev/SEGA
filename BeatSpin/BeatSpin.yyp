@@ -49,7 +49,7 @@
     {"id":{"name":"spr_backgroundoverlay","path":"sprites/spr_backgroundoverlay/spr_backgroundoverlay.yy",},},
     {"id":{"name":"sc_pulllever","path":"scripts/sc_pulllever/sc_pulllever.yy",},},
     {"id":{"name":"spr_slot","path":"sprites/spr_slot/spr_slot.yy",},},
-    {"id":{"name":"rm_game_Sunil","path":"rooms/rm_game_Sunil/rm_game_Sunil.yy",},},
+    {"id":{"name":"rm_game_prototype","path":"rooms/rm_game_prototype/rm_game_prototype.yy",},},
     {"id":{"name":"obj_notes","path":"objects/obj_notes/obj_notes.yy",},},
     {"id":{"name":"spr_notes","path":"sprites/spr_notes/spr_notes.yy",},},
     {"id":{"name":"obj_button_parent","path":"objects/obj_button_parent/obj_button_parent.yy",},},
@@ -58,7 +58,7 @@
     {"id":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
   ],
   "RoomOrderNodes": [
-    {"roomId":{"name":"rm_game_Sunil","path":"rooms/rm_game_Sunil/rm_game_Sunil.yy",},},
+    {"roomId":{"name":"rm_game_prototype","path":"rooms/rm_game_prototype/rm_game_prototype.yy",},},
     {"roomId":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
   ],
   "templateType": "game",
