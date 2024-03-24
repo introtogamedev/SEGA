@@ -43,6 +43,7 @@
     {"id":{"name":"obj_note_manager","path":"objects/obj_note_manager/obj_note_manager.yy",},},
     {"id":{"name":"obj_slot","path":"objects/obj_slot/obj_slot.yy",},},
     {"id":{"name":"spr_button_red","path":"sprites/spr_button_red/spr_button_red.yy",},},
+    {"id":{"name":"Laur_Metamorphose","path":"sounds/Laur_Metamorphose/Laur_Metamorphose.yy",},},
     {"id":{"name":"spr_backgroundoverlay","path":"sprites/spr_backgroundoverlay/spr_backgroundoverlay.yy",},},
     {"id":{"name":"spr_slot","path":"sprites/spr_slot/spr_slot.yy",},},
     {"id":{"name":"rm_game_Sunil","path":"rooms/rm_game_Sunil/rm_game_Sunil.yy",},},

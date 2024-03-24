@@ -38,3 +38,9 @@ while (ds_queue_size(column1) > 0) {
 }
 show_debug_message("end");
 */
+
+song = audio_play_sound(Laur_Metamorphose,1,false);
+leeway = 200; //Extra time player has to hit the button;
+
+
+my_score = 0;
