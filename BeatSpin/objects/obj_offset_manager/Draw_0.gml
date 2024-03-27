@@ -5,6 +5,6 @@ if (keyboard_check(increase_offset) || keyboard_check(decrease_offset))
 
 if (timer < 60)
 {
-	if (global.offset >= 0) draw_text_transformed(10,10,"Offset: +" + string(global.offset) + "ms",1,1,0);
-	else draw_text_transformed(10,10,"Offset: " + string(global.offset) + "ms",1,1,0);
+	if (display_offset >= 0) draw_text_transformed(10,10,"Offset: +" + string(display_offset) + "ms",1,1,0);
+	else draw_text_transformed(10,10,"Offset: " + string(display_offset) + "ms",1,1,0);
 }

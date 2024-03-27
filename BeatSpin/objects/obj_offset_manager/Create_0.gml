@@ -1,4 +1,4 @@
-global.offset = 0;
+display_offset = global.offset - 300;
 
 max_offset = 300;
 min_offset = -300;
