@@ -1,13 +1,9 @@
-//Amongus
-//show_debug_message(audio_sound_get_track_position(song));
-/* //Testing stuff
-if (song != pointer_null) {
-	if (audio_sound_get_track_position(song)*1000 >= ds_queue_head(column1)) {
-		ds_queue_dequeue(column1);
-		instance_create_layer(x+delta_time * 10,y,"notes",obj_notes);
-		show_debug_message("amonsgd");
-	}
-}*/
+//Create Notes
+
+
+//instance_create_layer(x+delta_time * 10,y,"notes",obj_notes);
+
+
 
 //Set songposition
 var _songposition = audio_sound_get_track_position(song)*1000  //in milliseconds

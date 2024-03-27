@@ -1,4 +1,4 @@
-//Get variables from JSON file
+//Get variables from BSP file
 
 column1 = ds_queue_create();
 column2 = ds_queue_create();
@@ -29,18 +29,17 @@ if (file_exists(working_directory + "song.bsp")) { //this only works with one so
 	file_text_close(_file);
 }
 
-/*
-if (ds_queue_size(column1) > 0) {
-	show_debug_message("full");
-}
-while (ds_queue_size(column1) > 0) {
-	show_debug_message(ds_queue_dequeue(column1));
-}
-show_debug_message("end");
-*/
+//Play the song and set other variables
 
 song = audio_play_sound(Laur_Metamorphose,1,false);
 leeway = 200; //Extra time player has to hit the button;
 
 
 my_score = 0;
+
+notes1 = ds_list_create();
+notes2 = ds_list_create();
+notes3 = ds_list_create();
+notes4 = ds_list_create();
+notes5 = ds_list_create();
+notes6 = ds_list_create();
