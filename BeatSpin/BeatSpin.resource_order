@@ -30,6 +30,7 @@
     {"name":"spr_slot","order":2,"path":"sprites/spr_slot/spr_slot.yy",},
     {"name":"rm_game_prototype","order":1,"path":"rooms/rm_game_prototype/rm_game_prototype.yy",},
     {"name":"obj_notes","order":6,"path":"objects/obj_notes/obj_notes.yy",},
+    {"name":"sc_player_variables","order":1,"path":"scripts/sc_player_variables/sc_player_variables.yy",},
     {"name":"spr_notes","order":7,"path":"sprites/spr_notes/spr_notes.yy",},
     {"name":"obj_button_parent","order":4,"path":"objects/obj_button_parent/obj_button_parent.yy",},
     {"name":"spr_button_white","order":5,"path":"sprites/spr_button_white/spr_button_white.yy",},

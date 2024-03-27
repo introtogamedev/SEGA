@@ -28,12 +28,15 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
   ],
   "IncludedFiles": [
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"hard.bsp","CopyToMask":-1,"filePath":"datafiles",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"impossible.bsp","CopyToMask":-1,"filePath":"datafiles",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"normal.bsp","CopyToMask":-1,"filePath":"datafiles",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"song.bsp","CopyToMask":-1,"filePath":"datafiles",},
   ],
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.8.2.108",
+    "IDEVersion": "2023.11.1.129",
   },
   "resources": [
     {"id":{"name":"spr_lever","path":"sprites/spr_lever/spr_lever.yy",},},
@@ -51,6 +54,7 @@
     {"id":{"name":"spr_slot","path":"sprites/spr_slot/spr_slot.yy",},},
     {"id":{"name":"rm_game_prototype","path":"rooms/rm_game_prototype/rm_game_prototype.yy",},},
     {"id":{"name":"obj_notes","path":"objects/obj_notes/obj_notes.yy",},},
+    {"id":{"name":"sc_player_variables","path":"scripts/sc_player_variables/sc_player_variables.yy",},},
     {"id":{"name":"spr_notes","path":"sprites/spr_notes/spr_notes.yy",},},
     {"id":{"name":"obj_button_parent","path":"objects/obj_button_parent/obj_button_parent.yy",},},
     {"id":{"name":"spr_button_white","path":"sprites/spr_button_white/spr_button_white.yy",},},
