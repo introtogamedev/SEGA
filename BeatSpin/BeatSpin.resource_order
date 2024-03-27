@@ -17,6 +17,7 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"obj_offset_manager","order":10,"path":"objects/obj_offset_manager/obj_offset_manager.yy",},
     {"name":"spr_lever","order":8,"path":"sprites/spr_lever/spr_lever.yy",},
     {"name":"obj_backgroundoverlay","order":5,"path":"objects/obj_backgroundoverlay/obj_backgroundoverlay.yy",},
     {"name":"obj_lever","order":7,"path":"objects/obj_lever/obj_lever.yy",},
