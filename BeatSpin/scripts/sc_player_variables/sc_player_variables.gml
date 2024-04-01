@@ -1,1 +1,1 @@
-global.offset = 300;
+global.offset = 300; //base offset
