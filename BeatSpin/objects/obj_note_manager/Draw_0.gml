@@ -1,5 +1,5 @@
 //Draw notes
-
+/*
 var _songposition = audio_sound_get_track_position(song)*1000
 
 if (!ds_queue_empty(column1) && abs(_songposition - ds_queue_head(column1)) <= leeway) {
@@ -25,4 +25,4 @@ if (!ds_queue_empty(column5) && abs(_songposition - ds_queue_head(column5)) <= l
 if (!ds_queue_empty(column6) && abs(_songposition - ds_queue_head(column6)) <= leeway) {
 	draw_sprite_ext(spr_notes,0,1028,240 + (_songposition-ds_queue_head(column6)) * 480/400,2,2,0,c_white,1);
 }
-
+*/

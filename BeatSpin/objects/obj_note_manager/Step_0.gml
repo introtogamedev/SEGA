@@ -1,52 +1,150 @@
-//Create Notes
-
-
-//instance_create_layer(x+delta_time * 10,y,"notes",obj_notes);
-
-
-
-//Set songposition
+///Set songposition
 var _songposition = audio_sound_get_track_position(song)*1000  //in milliseconds
 
+///Create Notes
+
+if (!ds_queue_empty(column1) && abs(_songposition - ds_queue_head(column1)) <= leeway) {
+	var _note = instance_create_layer(228,0,"notes",obj_notes);
+	_note.image_index = irandom(3);
+	_note.image_xscale = 2;
+	_note.image_yscale = 2;
+	_note.position = ds_queue_dequeue(column1);
+	ds_list_add(notes1,_note);
+}
+if (!ds_queue_empty(column2) && abs(_songposition - ds_queue_head(column2)) <= leeway) {
+	var _note = instance_create_layer(388,0,"notes",obj_notes);
+	_note.image_index = irandom(3);
+	_note.image_xscale = 2;
+	_note.image_yscale = 2;
+	_note.position = ds_queue_dequeue(column2);
+	ds_list_add(notes2,_note);
+}
+if (!ds_queue_empty(column3) && abs(_songposition - ds_queue_head(column3)) <= leeway) {
+	var _note = instance_create_layer(548,0,"notes",obj_notes);
+	_note.image_index = irandom(3);
+	_note.image_xscale = 2;
+	_note.image_yscale = 2;
+	_note.position = ds_queue_dequeue(column3);
+	ds_list_add(notes3,_note);
+}
+if (!ds_queue_empty(column4) && abs(_songposition - ds_queue_head(column4)) <= leeway) {
+	var _note = instance_create_layer(708,0,"notes",obj_notes);
+	_note.image_index = irandom(3);
+	_note.image_xscale = 2;
+	_note.image_yscale = 2;
+	_note.position = ds_queue_dequeue(column4);
+	ds_list_add(notes4,_note);
+}
+if (!ds_queue_empty(column5) && abs(_songposition - ds_queue_head(column5)) <= leeway) {
+	var _note = instance_create_layer(868,0,"notes",obj_notes);
+	_note.image_index = irandom(3);
+	_note.image_xscale = 2;
+	_note.image_yscale = 2;
+	_note.position = ds_queue_dequeue(column5);
+	ds_list_add(notes5,_note);
+}
+if (!ds_queue_empty(column6) && abs(_songposition - ds_queue_head(column6)) <= leeway) {
+	var _note = instance_create_layer(1028,0,"notes",obj_notes);
+	_note.image_index = irandom(3);
+	_note.image_xscale = 2;
+	_note.image_yscale = 2;
+	_note.position = ds_queue_dequeue(column6);
+	ds_list_add(notes6,_note);
+}
+
+
+
 //Check for missed notes
-if (!ds_queue_empty(column1) && _songposition - global.offset >= ds_queue_head(column1) + leeway) {
-	ds_queue_dequeue(column1);
+if (!ds_list_empty(notes1) && _songposition - global.offset >= notes1[|0].position + leeway) {
+	var _remove = notes1[|0];
+	ds_list_delete(notes1,0);
+	instance_destroy(_remove);
 	my_score--;
 	//miss
 }
-if (!ds_queue_empty(column2) && _songposition - global.offset >= ds_queue_head(column2) + leeway) {
-	ds_queue_dequeue(column2);
+if (!ds_list_empty(notes2) && _songposition - global.offset >= notes2[|0].position + leeway) {
+	var _remove = notes2[|0];
+	ds_list_delete(notes2,0);
+	instance_destroy(_remove);
 	my_score--;
 	//miss
 }
-if (!ds_queue_empty(column3) && _songposition - global.offset >= ds_queue_head(column3) + leeway) {
-	ds_queue_dequeue(column3);
+if (!ds_list_empty(notes3) && _songposition - global.offset >= notes3[|0].position + leeway) {
+	var _remove = notes3[|0];
+	ds_list_delete(notes3,0);
+	instance_destroy(_remove);
 	my_score--;
 	//miss
 }
-if (!ds_queue_empty(column4) && _songposition - global.offset >= ds_queue_head(column4) + leeway) {
-	ds_queue_dequeue(column4);
+if (!ds_list_empty(notes4) && _songposition - global.offset >= notes4[|0].position + leeway) {
+	var _remove = notes4[|0];
+	ds_list_delete(notes4,0);
+	instance_destroy(_remove);
 	my_score--;
 	//miss
 }
-if (!ds_queue_empty(column5) && _songposition - global.offset >= ds_queue_head(column5) + leeway) {
-	ds_queue_dequeue(column5);
+if (!ds_list_empty(notes5) && _songposition - global.offset >= notes5[|0].position + leeway) {
+	var _remove = notes5[|0];
+	ds_list_delete(notes5,0);
+	instance_destroy(_remove);
 	my_score--;
 	//miss
 }
-if (!ds_queue_empty(column6) && _songposition - global.offset >= ds_queue_head(column6) + leeway) {
-	ds_queue_dequeue(column6);
+if (!ds_list_empty(notes6) && _songposition - global.offset >= notes6[|0].position + leeway) {
+	var _remove = notes6[|0];
+	ds_list_delete(notes6,0);
+	instance_destroy(_remove);
 	my_score--;
 	//miss
 }
+
+
+
+///Set note y values
+
+for (var _i = 0; _i < ds_list_size(notes1); _i++) {
+	notes1[|_i].y = 240 + (_songposition-notes1[|_i].position) * 480/400;
+}
+for (var _i = 0; _i < ds_list_size(notes2); _i++) {
+	notes2[|_i].y = 240 + (_songposition-notes2[|_i].position) * 480/400;
+}
+for (var _i = 0; _i < ds_list_size(notes3); _i++) {
+	notes3[|_i].y = 240 + (_songposition-notes3[|_i].position) * 480/400;
+}
+for (var _i = 0; _i < ds_list_size(notes4); _i++) {
+	notes4[|_i].y = 240 + (_songposition-notes4[|_i].position) * 480/400;
+}
+for (var _i = 0; _i < ds_list_size(notes5); _i++) {
+	notes5[|_i].y = 240 + (_songposition-notes5[|_i].position) * 480/400;
+}
+for (var _i = 0; _i < ds_list_size(notes6); _i++) {
+	notes6[|_i].y = 240 + (_songposition-notes6[|_i].position) * 480/400;
+}
+
+
 
 //Check for presses
 if (keyboard_check_pressed(ord("S")))
 {
-	if (!ds_queue_empty(column1) && _songposition + leeway - global.offset >= ds_queue_head(column1)) {
-		ds_queue_dequeue(column1);
-		my_score++;
-		//hit
+	if (!ds_list_empty(notes1)) {
+		var _index = -1;
+		var _distance = leeway + 1
+		for (var _i = 0; _i < ds_list_size(notes1); _i++) {
+			if (abs(notes1[|_i].position - _songposition) < _distance) {
+				_index = _i;
+				_distance = abs(notes1[|_i].position - _songposition);
+			}
+		}
+		if (_index != -1) {
+			var _remove = notes1[|_index];
+			ds_list_delete(notes1,_index);
+			instance_destroy(_remove);
+			my_score++;
+			//hit
+		} else {
+			my_score--;
+			//missclick
+		}
 	} else {
 		my_score--;
 		//missclick
@@ -54,10 +152,25 @@ if (keyboard_check_pressed(ord("S")))
 }
 if (keyboard_check_pressed(ord("D")))
 {
-	if (!ds_queue_empty(column2) && _songposition + leeway - global.offset >= ds_queue_head(column2)) {
-		ds_queue_dequeue(column2);
-		my_score++;
-		//hit
+	if (!ds_list_empty(notes2)) {
+		var _index = -1;
+		var _distance = leeway + 1
+		for (var _i = 0; _i < ds_list_size(notes2); _i++) {
+			if (abs(notes2[|_i].position - _songposition) < _distance) {
+				_index = _i;
+				_distance = abs(notes2[|_i].position - _songposition);
+			}
+		}
+		if (_index != -1) {
+			var _remove = notes2[|_index];
+			ds_list_delete(notes2,_index);
+			instance_destroy(_remove);
+			my_score++;
+			//hit
+		} else {
+			my_score--;
+			//missclick
+		}
 	} else {
 		my_score--;
 		//missclick
@@ -65,10 +178,25 @@ if (keyboard_check_pressed(ord("D")))
 }
 if (keyboard_check_pressed(ord("F")))
 {
-	if (!ds_queue_empty(column3) && _songposition + leeway - global.offset >= ds_queue_head(column3)) {
-		ds_queue_dequeue(column3);
-		my_score++;
-		//hit
+	if (!ds_list_empty(notes3)) {
+		var _index = -1;
+		var _distance = leeway + 1
+		for (var _i = 0; _i < ds_list_size(notes3); _i++) {
+			if (abs(notes3[|_i].position - _songposition) < _distance) {
+				_index = _i;
+				_distance = abs(notes3[|_i].position - _songposition);
+			}
+		}
+		if (_index != -1) {
+			var _remove = notes3[|_index];
+			ds_list_delete(notes3,_index);
+			instance_destroy(_remove);
+			my_score++;
+			//hit
+		} else {
+			my_score--;
+			//missclick
+		}
 	} else {
 		my_score--;
 		//missclick
@@ -76,10 +204,25 @@ if (keyboard_check_pressed(ord("F")))
 }
 if (keyboard_check_pressed(ord("J")))
 {
-	if (!ds_queue_empty(column4) && _songposition + leeway - global.offset >= ds_queue_head(column4)) {
-		ds_queue_dequeue(column4);
-		my_score++;
-		//hit
+	if (!ds_list_empty(notes4)) {
+		var _index = -1;
+		var _distance = leeway + 1
+		for (var _i = 0; _i < ds_list_size(notes4); _i++) {
+			if (abs(notes4[|_i].position - _songposition) < _distance) {
+				_index = _i;
+				_distance = abs(notes4[|_i].position - _songposition);
+			}
+		}
+		if (_index != -1) {
+			var _remove = notes4[|_index];
+			ds_list_delete(notes4,_index);
+			instance_destroy(_remove);
+			my_score++;
+			//hit
+		} else {
+			my_score--;
+			//missclick
+		}
 	} else {
 		my_score--;
 		//missclick
@@ -87,10 +230,25 @@ if (keyboard_check_pressed(ord("J")))
 }
 if (keyboard_check_pressed(ord("K")))
 {
-	if (!ds_queue_empty(column5) && _songposition + leeway - global.offset >= ds_queue_head(column5)) {
-		ds_queue_dequeue(column5);
-		my_score++;
-		//hit
+	if (!ds_list_empty(notes5)) {
+		var _index = -1;
+		var _distance = leeway + 1
+		for (var _i = 0; _i < ds_list_size(notes5); _i++) {
+			if (abs(notes5[|_i].position - _songposition) < _distance) {
+				_index = _i;
+				_distance = abs(notes5[|_i].position - _songposition);
+			}
+		}
+		if (_index != -1) {
+			var _remove = notes5[|_index];
+			ds_list_delete(notes5,_index);
+			instance_destroy(_remove);
+			my_score++;
+			//hit
+		} else {
+			my_score--;
+			//missclick
+		}
 	} else {
 		my_score--;
 		//missclick
@@ -98,10 +256,25 @@ if (keyboard_check_pressed(ord("K")))
 }
 if (keyboard_check_pressed(ord("L")))
 {
-	if (!ds_queue_empty(column6) && _songposition + leeway - global.offset >= ds_queue_head(column6)) {
-		ds_queue_dequeue(column6);
-		my_score++;
-		//hit
+	if (!ds_list_empty(notes6)) {
+		var _index = -1;
+		var _distance = leeway + 1
+		for (var _i = 0; _i < ds_list_size(notes6); _i++) {
+			if (abs(notes6[|_i].position - _songposition) < _distance) {
+				_index = _i;
+				_distance = abs(notes6[|_i].position - _songposition);
+			}
+		}
+		if (_index != -1) {
+			var _remove = notes6[|_index];
+			ds_list_delete(notes6,_index);
+			instance_destroy(_remove);
+			my_score++;
+			//hit
+		} else {
+			my_score--;
+			//missclick
+		}
 	} else {
 		my_score--;
 		//missclick
