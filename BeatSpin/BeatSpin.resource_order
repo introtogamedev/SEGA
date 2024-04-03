@@ -20,6 +20,7 @@
     {"name":"obj_offset_manager","order":10,"path":"objects/obj_offset_manager/obj_offset_manager.yy",},
     {"name":"obj_table","order":12,"path":"objects/obj_table/obj_table.yy",},
     {"name":"spr_lever","order":8,"path":"sprites/spr_lever/spr_lever.yy",},
+    {"name":"obj_shop","order":13,"path":"objects/obj_shop/obj_shop.yy",},
     {"name":"obj_backgroundoverlay","order":5,"path":"objects/obj_backgroundoverlay/obj_backgroundoverlay.yy",},
     {"name":"obj_lever","order":7,"path":"objects/obj_lever/obj_lever.yy",},
     {"name":"obj_button_white","order":3,"path":"objects/obj_button_white/obj_button_white.yy",},
