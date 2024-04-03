@@ -16,10 +16,10 @@ if (pull_lever() && state != -1)
 	if (mouse_y > mouse_y_start_pos+400) {image_index = 4; state = 4;}
 }
 
-if (mouse_check_button_released(mb_left))
+if (mouse_check_button_released(mb_left) && state != -1)
 {
 	image_index = 0;
-	if (state != 0) {
+	if (state > 0) {
 		obj_note_manager.start_song(state);
 		state = -1;
 	} else {
