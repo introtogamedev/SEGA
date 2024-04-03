@@ -347,7 +347,7 @@ if (!ds_list_empty(notes2))
 			ds_list_delete(notes2,_index);
 			instance_destroy(_remove);
 		}
-		// else my_score --;
+		//else my_score --;
 	}
 	//if note goes offscreen
 	for (var _i = 0; _i < ds_list_size(notes2); _i++) {
