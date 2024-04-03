@@ -1,4 +1,4 @@
-display_offset = global.offset - 300; //display offset defaults to 0
+sdisplay_offset = global.offset - 300; //display offset defaults to 0
 if (timer < 60) timer ++; 
 
 if (keyboard_check_pressed(increase_offset))
