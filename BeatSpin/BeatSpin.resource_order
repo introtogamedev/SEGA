@@ -29,6 +29,7 @@
     {"name":"obj_mascot","order":11,"path":"objects/obj_mascot/obj_mascot.yy",},
     {"name":"spr_frame","order":3,"path":"sprites/spr_frame/spr_frame.yy",},
     {"name":"obj_note_manager","order":8,"path":"objects/obj_note_manager/obj_note_manager.yy",},
+    {"name":"spr_shop","order":12,"path":"sprites/spr_shop/spr_shop.yy",},
     {"name":"rm_shop","order":2,"path":"rooms/rm_shop/rm_shop.yy",},
     {"name":"spr_button_red","order":4,"path":"sprites/spr_button_red/spr_button_red.yy",},
     {"name":"Laur_Metamorphose","order":1,"path":"sounds/Laur_Metamorphose/Laur_Metamorphose.yy",},
