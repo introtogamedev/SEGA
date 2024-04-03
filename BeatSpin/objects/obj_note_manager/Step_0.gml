@@ -1,4 +1,5 @@
 ///Set songposition
+if (playing) {
 var _songposition = audio_sound_get_track_position(song)*1000  //in milliseconds
 
 ///Create Notes
@@ -516,3 +517,4 @@ if (!ds_list_empty(notes6))
 	}
 }
 
+}
