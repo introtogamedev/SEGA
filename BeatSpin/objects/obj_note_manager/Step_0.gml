@@ -517,4 +517,10 @@ if (!ds_list_empty(notes6))
 	}
 }
 
+if (!audio_is_playing(song)) {
+	obj_lever.state = 0;
+	playing = false;
 }
+
+}
+
