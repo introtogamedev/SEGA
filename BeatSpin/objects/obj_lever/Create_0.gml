@@ -7,3 +7,4 @@ image_speed = 0;
 
 mouse_y_start_pos = 0;
 
+state = 0;

@@ -1,3 +1,5 @@
+function process_notes(_file_name) {
+
 //Get variables from BSP file
 
 column1 = ds_queue_create();
@@ -7,8 +9,9 @@ column4 = ds_queue_create();
 column5 = ds_queue_create();
 column6 = ds_queue_create();
 
-if (file_exists(working_directory + "song.bsp")) { //this only works with one song
-	var _file = file_text_open_read("song.bsp");
+if (file_exists(_file_name+".bsp")) { //this only works with one song
+	var _file = file_text_open_read(_file_name+".bsp");
+	show_debug_message(_file_name)
 	while (!file_text_eof(_file)) {
 		var _line = string_split(file_text_readln(_file),",");
 		var _column = _line[0];
@@ -27,15 +30,41 @@ if (file_exists(working_directory + "song.bsp")) { //this only works with one so
 		}
 	}
 	file_text_close(_file);
+} else {
+	show_debug_message("File Missing");
+}
+
 }
 
 //Play the song and set other variables
 
-song = audio_play_sound(Laur_Metamorphose,1,false);
-leeway = 200; //Extra time player has to hit the button;
+function start_song(_difficulty) {
+	switch (_difficulty) {
+		case 1:
+				song = audio_play_sound(Laur_Metamorphose,1,false);
+				process_notes("easy")
+		break;
+		case 2:
+				song = audio_play_sound(Laur_Metamorphose,1,false);
+				process_notes("normal")
+		break;
+		case 3:
+				song = audio_play_sound(Laur_Metamorphose,1,false);
+				process_notes("hard")
+		break;
+		case 4:
+				song = audio_play_sound(Laur_Metamorphose,1,false);
+				process_notes("impossible")
+		break;
+	}
+	leeway = 200; //Makes sure notes are missed by the creatpr;
+	playing = true;
+}
 
 
 my_score = 0;
+playing = false;
+song = pointer_null;
 
 notes1 = ds_list_create();
 notes2 = ds_list_create();
