@@ -555,8 +555,11 @@ if (!ds_list_empty(notes6))
 if (!audio_is_playing(song)) {
 	obj_lever.state = 0;
 	playing = false;
-}
+	
 	global.combo_multiplier = 1; //remove combo multiplier
 	global.combo = 0; //reset combo
+	
+}
+	
 }
 
