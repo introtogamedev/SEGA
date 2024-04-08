@@ -284,7 +284,7 @@ if (keyboard_check_pressed(ord("L")))
 	}
 }
 */
-var _offscreen = 480 + 240
+var _offscreen = 736;
 
 if (!ds_list_empty(notes1))
 {
