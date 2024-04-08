@@ -44,6 +44,7 @@
     {"id":{"name":"spr_lever","path":"sprites/spr_lever/spr_lever.yy",},},
     {"id":{"name":"obj_backgroundoverlay","path":"objects/obj_backgroundoverlay/obj_backgroundoverlay.yy",},},
     {"id":{"name":"obj_lever","path":"objects/obj_lever/obj_lever.yy",},},
+    {"id":{"name":"sc_combo","path":"scripts/sc_combo/sc_combo.yy",},},
     {"id":{"name":"obj_button_white","path":"objects/obj_button_white/obj_button_white.yy",},},
     {"id":{"name":"spr_table","path":"sprites/spr_table/spr_table.yy",},},
     {"id":{"name":"obj_button_red","path":"objects/obj_button_red/obj_button_red.yy",},},
