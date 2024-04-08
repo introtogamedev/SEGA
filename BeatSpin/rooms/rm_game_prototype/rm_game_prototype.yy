@@ -25,8 +25,8 @@
     {"name":"inst_7D7ADF2D","path":"rooms/rm_game_prototype/rm_game_prototype.yy",},
     {"name":"inst_362B618A","path":"rooms/rm_game_prototype/rm_game_prototype.yy",},
     {"name":"inst_60612BC5","path":"rooms/rm_game_prototype/rm_game_prototype.yy",},
-    {"name":"inst_57701A41","path":"rooms/rm_game_prototype/rm_game_prototype.yy",},
     {"name":"inst_75C7F138","path":"rooms/rm_game_prototype/rm_game_prototype.yy",},
+    {"name":"inst_57701A41","path":"rooms/rm_game_prototype/rm_game_prototype.yy",},
   ],
   "isDnd": false,
   "layers": [
