@@ -304,10 +304,15 @@ if (!ds_list_empty(notes1))
 	{
 		if (_index != -1)
 		{
-			my_score ++;
+			sc_combo();
 			var _remove = notes1[|_index];
+			
+			instance_create_layer(_remove.x - 40,_remove.y + 40,"particles", obj_note_hit);
+			
 			ds_list_delete(notes1,_index);
 			instance_destroy(_remove);
+			
+			
 		}
 		//else my_score --;
 	}
@@ -315,7 +320,9 @@ if (!ds_list_empty(notes1))
 	for (var _i = 0; _i < ds_list_size(notes1); _i++) {
 		if (notes1[|_i].y > _offscreen) 
 		{
-			my_score --;
+			my_score -= 20;
+			global.combo = 0;
+			
 			var _remove = notes1[|_i];
 			ds_list_delete(notes1,_i);
 			instance_destroy(_remove);
@@ -342,8 +349,12 @@ if (!ds_list_empty(notes2))
 	{
 		if (_index != -1)
 		{
-			my_score ++;
+			sc_combo(); //combo function
+			
 			var _remove = notes2[|_index];
+			
+			instance_create_layer(_remove.x - 40,_remove.y + 40,"particles", obj_note_hit);
+			
 			ds_list_delete(notes2,_index);
 			instance_destroy(_remove);
 		}
@@ -353,7 +364,9 @@ if (!ds_list_empty(notes2))
 	for (var _i = 0; _i < ds_list_size(notes2); _i++) {
 		if (notes2[|_i].y > _offscreen) 
 		{
-			my_score --;
+			my_score -= 20;
+			global.combo = 0;
+			
 			var _remove = notes2[|_i];
 			ds_list_delete(notes2,_i);
 			instance_destroy(_remove);
@@ -381,8 +394,12 @@ if (!ds_list_empty(notes3))
 	{
 		if (_index != -1)
 		{
-			my_score ++;
+			sc_combo(); //combo function
 			var _remove = notes3[|_index];
+			
+			instance_create_layer(_remove.x - 40,_remove.y + 40,"particles", obj_note_hit);
+			
+			
 			ds_list_delete(notes3,_index);
 			instance_destroy(_remove);
 		}
@@ -392,7 +409,9 @@ if (!ds_list_empty(notes3))
 	for (var _i = 0; _i < ds_list_size(notes3); _i++) {
 		if (notes3[|_i].y > _offscreen)
 		{
-			my_score --;
+			my_score -= 20;
+			global.combo = 0;
+			
 			var _remove = notes3[|_i];
 			ds_list_delete(notes3,_i);
 			instance_destroy(_remove);
@@ -420,8 +439,12 @@ if (!ds_list_empty(notes4))
 	{
 		if (_index != -1)
 		{
-			my_score ++;
+			sc_combo(); //combo function
 			var _remove = notes4[|_index];
+			
+			instance_create_layer(_remove.x - 40,_remove.y + 40,"particles", obj_note_hit);
+			
+			
 			ds_list_delete(notes4,_index);
 			instance_destroy(_remove);
 		}
@@ -431,8 +454,10 @@ if (!ds_list_empty(notes4))
 	for (var _i = 0; _i < ds_list_size(notes4); _i++) {
 		if (notes4[|_i].y > _offscreen) 
 		{
-			my_score --;
-			var _remove = notes4[|_i];
+			my_score -= 20;
+			global.combo = 0;
+			
+			var _remove = notes4[|_i];			
 			ds_list_delete(notes4,_i);
 			instance_destroy(_remove);
 			_i --;
@@ -459,8 +484,11 @@ if (!ds_list_empty(notes5))
 	{
 		if (_index != -1)
 		{
-			my_score ++;
+			sc_combo(); //combo function
 			var _remove = notes5[|_index];
+			
+			instance_create_layer(_remove.x - 40,_remove.y + 40,"particles", obj_note_hit);
+			
 			ds_list_delete(notes5,_index);
 			instance_destroy(_remove);
 		}
@@ -470,7 +498,9 @@ if (!ds_list_empty(notes5))
 	for (var _i = 0; _i < ds_list_size(notes5); _i++) {
 		if (notes5[|_i].y > _offscreen) 
 		{
-			my_score --;
+			my_score -= 20;
+			global.combo = 0;
+			
 			var _remove = notes5[|_i];
 			ds_list_delete(notes5,_i);
 			instance_destroy(_remove);
@@ -497,8 +527,11 @@ if (!ds_list_empty(notes6))
 	{
 		if (_index != -1)
 		{
-			my_score ++;
+			sc_combo(); //combo function
 			var _remove = notes6[|_index];
+			
+			instance_create_layer(_remove.x - 40,_remove.y + 40,"particles", obj_note_hit);
+			
 			ds_list_delete(notes6,_index);
 			instance_destroy(_remove);
 		}
@@ -508,7 +541,9 @@ if (!ds_list_empty(notes6))
 	for (var _i = 0; _i < ds_list_size(notes6); _i++) {
 		if (notes6[|_i].y > _offscreen)
 		{
-			my_score --;
+			my_score -= 20;
+			global.combo = 0;
+			
 			var _remove = notes6[|_i];
 			ds_list_delete(notes6,_i);
 			instance_destroy(_remove);

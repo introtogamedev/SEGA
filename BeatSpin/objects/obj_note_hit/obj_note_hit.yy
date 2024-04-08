@@ -1,8 +1,9 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_mascot",
+  "name": "obj_note_hit",
   "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
   "managed": true,
@@ -28,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_mascot",
-    "path": "sprites/spr_mascot/spr_mascot.yy",
+    "name": "spr_hit_note",
+    "path": "sprites/spr_hit_note/spr_hit_note.yy",
   },
   "spriteMaskId": null,
   "visible": true,

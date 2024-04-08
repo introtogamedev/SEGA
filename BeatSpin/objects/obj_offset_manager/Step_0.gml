@@ -24,3 +24,5 @@ if (keyboard_check_pressed(decrease_offset))
 if (display_offset > max_offset) global.offset = 300 + 300; //+300 is the base offset
 if (display_offset < min_offset) global.offset = 0 + 300; //+300 is the base offset
 
+
+
