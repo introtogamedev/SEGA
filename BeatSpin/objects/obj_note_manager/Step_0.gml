@@ -4,7 +4,7 @@ var _songposition = audio_sound_get_track_position(song)*1000  //in milliseconds
 
 ///Create Notes
 
-if (!ds_queue_empty(column1) && abs(_songposition - ds_queue_head(column1)) <= leeway) {
+if (!ds_queue_empty(column1) && abs(_songposition - ds_queue_head(column1) + global.offset) <= leeway) {
 	var _note = instance_create_layer(228,0,"notes",obj_notes);
 	_note.image_index = irandom(3);
 	_note.image_xscale = 2;
@@ -12,7 +12,7 @@ if (!ds_queue_empty(column1) && abs(_songposition - ds_queue_head(column1)) <= l
 	_note.position = ds_queue_dequeue(column1);
 	ds_list_add(notes1,_note);
 }
-if (!ds_queue_empty(column2) && abs(_songposition - ds_queue_head(column2)) <= leeway) {
+if (!ds_queue_empty(column2) && abs(_songposition - ds_queue_head(column2) + global.offset) <= leeway) {
 	var _note = instance_create_layer(388,0,"notes",obj_notes);
 	_note.image_index = irandom(3);
 	_note.image_xscale = 2;
@@ -20,7 +20,7 @@ if (!ds_queue_empty(column2) && abs(_songposition - ds_queue_head(column2)) <= l
 	_note.position = ds_queue_dequeue(column2);
 	ds_list_add(notes2,_note);
 }
-if (!ds_queue_empty(column3) && abs(_songposition - ds_queue_head(column3)) <= leeway) {
+if (!ds_queue_empty(column3) && abs(_songposition - ds_queue_head(column3) + global.offset) <= leeway) {
 	var _note = instance_create_layer(548,0,"notes",obj_notes);
 	_note.image_index = irandom(3);
 	_note.image_xscale = 2;
@@ -28,7 +28,7 @@ if (!ds_queue_empty(column3) && abs(_songposition - ds_queue_head(column3)) <= l
 	_note.position = ds_queue_dequeue(column3);
 	ds_list_add(notes3,_note);
 }
-if (!ds_queue_empty(column4) && abs(_songposition - ds_queue_head(column4)) <= leeway) {
+if (!ds_queue_empty(column4) && abs(_songposition - ds_queue_head(column4) + global.offset) <= leeway) {
 	var _note = instance_create_layer(708,0,"notes",obj_notes);
 	_note.image_index = irandom(3);
 	_note.image_xscale = 2;
@@ -36,7 +36,7 @@ if (!ds_queue_empty(column4) && abs(_songposition - ds_queue_head(column4)) <= l
 	_note.position = ds_queue_dequeue(column4);
 	ds_list_add(notes4,_note);
 }
-if (!ds_queue_empty(column5) && abs(_songposition - ds_queue_head(column5)) <= leeway) {
+if (!ds_queue_empty(column5) && abs(_songposition - ds_queue_head(column5) + global.offset) <= leeway) {
 	var _note = instance_create_layer(868,0,"notes",obj_notes);
 	_note.image_index = irandom(3);
 	_note.image_xscale = 2;
@@ -44,7 +44,7 @@ if (!ds_queue_empty(column5) && abs(_songposition - ds_queue_head(column5)) <= l
 	_note.position = ds_queue_dequeue(column5);
 	ds_list_add(notes5,_note);
 }
-if (!ds_queue_empty(column6) && abs(_songposition - ds_queue_head(column6)) <= leeway) {
+if (!ds_queue_empty(column6) && abs(_songposition - ds_queue_head(column6) + global.offset) <= leeway) {
 	var _note = instance_create_layer(1028,0,"notes",obj_notes);
 	_note.image_index = irandom(3);
 	_note.image_xscale = 2;
@@ -102,7 +102,7 @@ if (!ds_list_empty(notes6) && _songposition >= notes6[|0].position + leeway) {
 
 
 ///Set note y values
-var _offset = (global.offset - 300) * (480/400); //480/400 is the pixel/ms of the notes
+var _offset = (global.offset - obj_offset_manager.offset_holder) * (480/400); //480/400 is the pixel/ms of the notes
 
 for (var _i = 0; _i < ds_list_size(notes1); _i++) {
 	notes1[|_i].y = 240 + (_songposition-notes1[|_i].position) * 480/400 - _offset;
@@ -295,8 +295,20 @@ if (!ds_list_empty(notes1))
 	//check for closest note
 	for (var _j = 0; _j < ds_list_size(notes1); _j++) {
 		if (abs(notes1[|_j].y - obj_line.y) < global.framing) {
+			//perfect
+			global.accuracy = 1;
 			_index = _j;
 			_distance = abs(notes1[|_j].position - _songposition);
+		}
+		else if (abs(notes1[|_j].y - obj_line.y) < global.framing + 60) {
+			//great
+			global.accuracy = 0.5;
+			_index = _j;
+			_distance = abs(notes1[|_j].position - _songposition);
+		}
+		else if (abs(notes1[|_j].y - obj_line.y) < global.framing + 90) {
+			//miss
+			_index = -1;
 		}
 	}
 	//if key pressed during time frame
@@ -311,10 +323,13 @@ if (!ds_list_empty(notes1))
 			
 			ds_list_delete(notes1,_index);
 			instance_destroy(_remove);
-			
-			
 		}
-		//else my_score --;
+		else 
+		{
+			//miss
+			my_score -= 20;
+			global.combo = 0;
+		}
 	}
 	//if note goes offscreen
 	for (var _i = 0; _i < ds_list_size(notes1); _i++) {
@@ -340,8 +355,20 @@ if (!ds_list_empty(notes2))
 	//check for closest note
 	for (var _j = 0; _j < ds_list_size(notes2); _j++) {
 		if (abs(notes2[|_j].y - obj_line.y) <  global.framing) {
+			//perfect
+			global.accuracy = 1;
 			_index = _j;
 			_distance = abs(notes2[|_j].position - _songposition);
+		}
+		else if (abs(notes2[|_j].y - obj_line.y) < global.framing + 60) {
+			//great
+			global.accuracy = 0.5;
+			_index = _j;
+			_distance = abs(notes2[|_j].position - _songposition);
+		}
+		else if (abs(notes2[|_j].y - obj_line.y) < global.framing + 90) {
+			//miss
+			_index = -1;
 		}
 	}
 	//if key pressed during time frame
@@ -358,7 +385,12 @@ if (!ds_list_empty(notes2))
 			ds_list_delete(notes2,_index);
 			instance_destroy(_remove);
 		}
-		//else my_score --;
+		else 
+		{
+			//miss
+			my_score -= 20;
+			global.combo = 0;
+		}
 	}
 	//if note goes offscreen
 	for (var _i = 0; _i < ds_list_size(notes2); _i++) {
@@ -385,8 +417,20 @@ if (!ds_list_empty(notes3))
 	//check for closest note
 	for (var _j = 0; _j < ds_list_size(notes3); _j++) {
 		if (abs(notes3[|_j].y - obj_line.y) <  global.framing) {
+			//perfect
+			global.accuracy = 1;
 			_index = _j;
 			_distance = abs(notes3[|_j].position - _songposition);
+		}
+		else if (abs(notes3[|_j].y - obj_line.y) < global.framing + 60) {
+			//great
+			global.accuracy = 0.5;
+			_index = _j;
+			_distance = abs(notes3[|_j].position - _songposition);
+		}
+		else if (abs(notes3[|_j].y - obj_line.y) < global.framing + 90) {
+			//miss
+			_index = -1;
 		}
 	}
 	//if key pressed during time frame
@@ -403,7 +447,12 @@ if (!ds_list_empty(notes3))
 			ds_list_delete(notes3,_index);
 			instance_destroy(_remove);
 		}
-		//else my_score --;
+		else 
+		{
+			//miss
+			my_score -= 20;
+			global.combo = 0;
+		}
 	}
 	//if note goes offscreen
 	for (var _i = 0; _i < ds_list_size(notes3); _i++) {
@@ -430,8 +479,20 @@ if (!ds_list_empty(notes4))
 	//check for closest note
 	for (var _j = 0; _j < ds_list_size(notes4); _j++) {
 		if (abs(notes4[|_j].y - obj_line.y) <  global.framing) {
+			//perfect
+			global.accuracy = 1;
 			_index = _j;
 			_distance = abs(notes4[|_j].position - _songposition);
+		}
+		else if (abs(notes4[|_j].y - obj_line.y) < global.framing + 60) {
+			//great
+			global.accuracy = 0.5;
+			_index = _j;
+			_distance = abs(notes4[|_j].position - _songposition);
+		}
+		else if (abs(notes4[|_j].y - obj_line.y) < global.framing + 90) {
+			//miss
+			_index = -1;
 		}
 	}
 	//if key pressed during time frame
@@ -448,7 +509,12 @@ if (!ds_list_empty(notes4))
 			ds_list_delete(notes4,_index);
 			instance_destroy(_remove);
 		}
-		//else my_score --;
+		else 
+		{
+			//miss
+			my_score -= 20;
+			global.combo = 0;
+		}
 	}
 	//if note goes offscreen
 	for (var _i = 0; _i < ds_list_size(notes4); _i++) {
@@ -474,9 +540,21 @@ if (!ds_list_empty(notes5))
 
 	//check for closest note
 	for (var _j = 0; _j < ds_list_size(notes5); _j++) {
-		if (abs(notes5[|_j].y - obj_line.y) < global.framing) {
+		if (abs(notes5[|_j].y - obj_line.y) <  global.framing) {
+			//perfect
+			global.accuracy = 1;
 			_index = _j;
 			_distance = abs(notes5[|_j].position - _songposition);
+		}
+		else if (abs(notes5[|_j].y - obj_line.y) < global.framing + 60) {
+			//great
+			global.accuracy = 0.5;
+			_index = _j;
+			_distance = abs(notes5[|_j].position - _songposition);
+		}
+		else if (abs(notes5[|_j].y - obj_line.y) < global.framing + 90) {
+			//miss
+			_index = -1;
 		}
 	}
 //if key pressed during time frame
@@ -492,7 +570,12 @@ if (!ds_list_empty(notes5))
 			ds_list_delete(notes5,_index);
 			instance_destroy(_remove);
 		}
-		//else my_score --;
+		else 
+		{
+			//miss
+			my_score -= 20;
+			global.combo = 0;
+		}
 	}
 	//if note goes offscreen
 	for (var _i = 0; _i < ds_list_size(notes5); _i++) {
@@ -518,8 +601,20 @@ if (!ds_list_empty(notes6))
 	//check for closest note
 	for (var _j = 0; _j < ds_list_size(notes6); _j++) {
 		if (abs(notes6[|_j].y - obj_line.y) <  global.framing) {
+			//perfect
+			global.accuracy = 1;
 			_index = _j;
 			_distance = abs(notes6[|_j].position - _songposition);
+		}
+		else if (abs(notes6[|_j].y - obj_line.y) < global.framing + 60) {
+			//great
+			global.accuracy = 0.5;
+			_index = _j;
+			_distance = abs(notes6[|_j].position - _songposition);
+		}
+		else if (abs(notes6[|_j].y - obj_line.y) < global.framing + 90) {
+			//miss
+			_index = -1;
 		}
 	}
 	//if key pressed during time frame
@@ -535,7 +630,12 @@ if (!ds_list_empty(notes6))
 			ds_list_delete(notes6,_index);
 			instance_destroy(_remove);
 		}
-		//else my_score --;
+		else 
+		{
+			//miss
+			my_score -= 20;
+			global.combo = 0;
+		}
 	}
 	//if note goes offscreen
 	for (var _i = 0; _i < ds_list_size(notes6); _i++) {

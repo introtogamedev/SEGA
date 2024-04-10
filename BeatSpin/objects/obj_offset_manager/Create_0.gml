@@ -1,4 +1,5 @@
-display_offset = global.offset - 300; //display offset defaults to 0
+offset_holder = global.offset; //base offset holder
+display_offset = global.offset - offset_holder; //display offset defaults to 0
 
 max_offset = 300;
 min_offset = 0;
