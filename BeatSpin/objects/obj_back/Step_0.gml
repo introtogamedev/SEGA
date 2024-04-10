@@ -1,5 +1,9 @@
-/// @description Insert description here
-// You can write your code in this editor
+//open shop
+if (keyboard_check_pressed(shop_key))
+{
+	global.in_shop = true;
+}
+
 
 if (global.in_shop) {
 	visible = true;
