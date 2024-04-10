@@ -25,6 +25,7 @@
     {"name":"inst_47A4CCE1","path":"rooms/rm_game_prototype/rm_game_prototype.yy",},
     {"name":"inst_3643D776","path":"rooms/rm_game_prototype/rm_game_prototype.yy",},
     {"name":"inst_4BFE1174","path":"rooms/rm_game_prototype/rm_game_prototype.yy",},
+    {"name":"inst_62141387","path":"rooms/rm_game_prototype/rm_game_prototype.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -51,6 +52,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4BFE1174","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_active_line","path":"objects/obj_active_line/obj_active_line.yy",},"properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_active_line","path":"objects/obj_active_line/obj_active_line.yy",},"propertyId":{"name":"key","path":"objects/obj_active_line/obj_active_line.yy",},"value":"\"L\"",},
           ],"rotation":0.0,"scaleX":2.0,"scaleY":1.0,"x":1024.0,"y":576.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_62141387","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_offset_manager","path":"objects/obj_offset_manager/obj_offset_manager.yy",},"properties":[],"rotation":0.0,"scaleX":11.0,"scaleY":19.0,"x":-288.0,"y":320.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"background_overlay","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_362B618A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_line","path":"objects/obj_line/obj_line.yy",},"properties":[],"rotation":0.0,"scaleX":14.5,"scaleY":1.0,"x":224.0,"y":576.0,},
