@@ -1,6 +1,7 @@
 //open shop
-if (keyboard_check_pressed(shop_key))
+if (keyboard_check_pressed(shop_key) && !obj_note_manager.playing)
 {
+	if (!global.in_shop) obj_speech_bubble.random_dia = irandom(2);
 	global.in_shop = true;
 }
 

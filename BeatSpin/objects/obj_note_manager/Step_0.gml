@@ -3,7 +3,6 @@ if (playing) {
 var _songposition = audio_sound_get_track_position(song)*1000  //in milliseconds
 
 ///Create Notes
-
 if (!ds_queue_empty(column1) && abs(_songposition - ds_queue_head(column1) + global.offset) <= leeway) {
 	var _note = instance_create_layer(228,0,"notes",obj_notes);
 	_note.image_index = irandom(3);
@@ -658,6 +657,8 @@ if (!audio_is_playing(song)) {
 	
 	global.combo_multiplier = 1; //remove combo multiplier
 	global.combo = 0; //reset combo
+	
+	global.money += my_score;
 	
 }
 	
