@@ -2,7 +2,7 @@
 
 if (keyboard_check_pressed(vk_escape)) {
 	if (audio_is_paused(song)) {
-		
+		audio_resume_sound(song);
 	} else {
 		audio_pause_sound(song);
 	}
