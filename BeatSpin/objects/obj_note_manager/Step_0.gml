@@ -99,27 +99,40 @@ if (!ds_list_empty(notes6) && _songposition >= notes6[|0].position + leeway) {
 }
 */
 
+var _note_speed_mult = 1;
+
+if (difficulty = 0) _note_speed_mult = 2.5;
+else if (difficulty = 1) _note_speed_mult = 2;
+else if (difficulty = 2) _note_speed_mult = 1.5;
+else if (difficulty = 3) _note_speed_mult = 1;
 
 ///Set note y values
-var _offset = (global.offset - obj_offset_manager.offset_holder) * (480/400); //480/400 is the pixel/ms of the notes
+var _note_speed = (480/400) / _note_speed_mult; // 480/400 is the base pixel/ms of the notes
+
 
 for (var _i = 0; _i < ds_list_size(notes1); _i++) {
-	notes1[|_i].y = 240 + (_songposition-notes1[|_i].position) * 480/400 - _offset;
+	var _spawn_y = ((_songposition-notes1[|_i].position) * _note_speed_mult); //200
+	notes1[|_i].y = _spawn_y * _note_speed - global.offset//_offset;
 }
 for (var _i = 0; _i < ds_list_size(notes2); _i++) {
-	notes2[|_i].y = 240 + (_songposition-notes2[|_i].position) * 480/400 - _offset;
+	var _spawn_y = ((_songposition-notes2[|_i].position) * _note_speed_mult); //200
+	notes2[|_i].y = _spawn_y *  _note_speed - global.offset//_offset;
 }
 for (var _i = 0; _i < ds_list_size(notes3); _i++) {
-	notes3[|_i].y = 240 + (_songposition-notes3[|_i].position) * 480/400 - _offset;
+	var _spawn_y = ((_songposition-notes3[|_i].position) * _note_speed_mult); //200
+	notes3[|_i].y = _spawn_y *  _note_speed - global.offset//_offset;
 }
 for (var _i = 0; _i < ds_list_size(notes4); _i++) {
-	notes4[|_i].y = 240 + (_songposition-notes4[|_i].position) * 480/400 - _offset;
+	var _spawn_y = ((_songposition-notes4[|_i].position) * _note_speed_mult); //200
+	notes4[|_i].y = _spawn_y *  _note_speed - global.offset//_offset;
 }
 for (var _i = 0; _i < ds_list_size(notes5); _i++) {
-	notes5[|_i].y = 240 + (_songposition-notes5[|_i].position) * 480/400 - _offset;
+	var _spawn_y = ((_songposition-notes5[|_i].position) * _note_speed_mult); //200
+	notes5[|_i].y = _spawn_y *  _note_speed - global.offset//_offset;
 }
 for (var _i = 0; _i < ds_list_size(notes6); _i++) {
-	notes6[|_i].y = 240 + (_songposition-notes6[|_i].position) * 480/400 - _offset;
+	var _spawn_y = ((_songposition-notes6[|_i].position) * _note_speed_mult); //200
+	notes6[|_i].y = _spawn_y *  _note_speed - global.offset//_offset;
 }
 
 

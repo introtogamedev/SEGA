@@ -9,6 +9,8 @@ column4 = ds_queue_create();
 column5 = ds_queue_create();
 column6 = ds_queue_create();
 
+difficulty = 0;
+
 if (file_exists(_file_name+".bsp")) { //this only works with one song
 	var _file = file_text_open_read(_file_name+".bsp");
 	show_debug_message(_file_name)
@@ -43,21 +45,25 @@ function start_song(_difficulty) {
 		case 1:
 				song = audio_play_sound(Laur_Metamorphose,1,false);
 				process_notes("easy")
+				difficulty = 0;
 		break;
 		case 2:
 				song = audio_play_sound(Laur_Metamorphose,1,false);
 				process_notes("normal")
+				difficulty = 1;
 		break;
 		case 3:
 				song = audio_play_sound(Laur_Metamorphose,1,false);
 				process_notes("hard")
+				difficulty = 2;
 		break;
 		case 4:
 				song = audio_play_sound(Laur_Metamorphose,1,false);
 				process_notes("impossible")
+				difficulty = 3;
 		break;
 	}
-	leeway = 200; //Makes sure notes are missed by the creatpr;
+	leeway = 3000; //Makes sure notes are missed by the creatpr;
 	playing = true;
 }
 
