@@ -11,7 +11,7 @@ else
 }
 
 //color editor
-var _col = c_white;
+var _col = c_red;
 var _hue = colour_get_hue(_col);
 var _sat = colour_get_saturation(_col);
 var _val = colour_get_value(_col);
