@@ -1,4 +1,13 @@
 ///Set songposition
+
+if (keyboard_check_pressed(vk_escape)) {
+	if (audio_is_paused(song)) {
+		audio_resume_sound(song);
+	} else {
+		audio_pause_sound(song);
+	}
+}
+
 if (playing) {
 var _songposition = audio_sound_get_track_position(song)*1000  //in milliseconds
 
