@@ -9,6 +9,13 @@ column4 = ds_queue_create();
 column5 = ds_queue_create();
 column6 = ds_queue_create();
 
+notes1 = ds_list_create();
+notes2 = ds_list_create();
+notes3 = ds_list_create();
+notes4 = ds_list_create();
+notes5 = ds_list_create();
+notes6 = ds_list_create();
+
 difficulty = 0;
 
 if (file_exists(_file_name+".bsp")) { //this only works with one song
@@ -72,9 +79,3 @@ my_score = 0;
 playing = false;
 song = pointer_null;
 
-notes1 = ds_list_create();
-notes2 = ds_list_create();
-notes3 = ds_list_create();
-notes4 = ds_list_create();
-notes5 = ds_list_create();
-notes6 = ds_list_create();
