@@ -1,14 +1,16 @@
 ///Set songposition
 
+if (playing) {
+	
+
 if (keyboard_check_pressed(vk_escape)) {
-	if (audio_is_paused(song)) {
-		audio_resume_sound(song);
-	} else {
+	if (!global.is_paused) {
 		audio_pause_sound(song);
+		global.is_paused = true;
 	}
 }
 
-if (playing) {
+	
 var _songposition = audio_sound_get_track_position(song)*1000  //in milliseconds
 
 ///Create Notes
