@@ -1,10 +1,12 @@
 if (global.accuracy = 1)
 {
+	y += 30
 	image_xscale = 2;
 	image_yscale = 2;
 }
 else
 {
+	y += 30
 	x += 50;
 	image_xscale = 1;
 	image_yscale = 1;
