@@ -10,8 +10,14 @@ function do_something() {
 		
 		case "restart":
 			global.is_paused = false;
-			audio_resume_sound(obj_note_manager.song);
-			audio_sound_set_track_position(obj_note_manager.song,0)
+			
+			with (obj_notes) {
+				instance_destroy();
+			}
+			
+			obj_note_manager.start_song(obj_note_manager.difficulty+1);
+	
+
 		break;
 		
 		case "leave":
@@ -22,7 +28,13 @@ function do_something() {
 			global.combo_multiplier = 1; //remove combo multiplier
 			global.combo = 0; //reset combo
 	
-			global.money += my_score;
+			global.money += obj_note_manager.my_score;
+			
+			with (obj_notes) {
+				instance_destroy();
+			}
+			
+			
 		break;
 	}
 
