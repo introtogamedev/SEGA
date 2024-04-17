@@ -1,4 +1,4 @@
-global.offset = -50; //base offset
+global.offset = 0; //base offset
 global.combo = 0; //combo variable
 global.accuracy = 0; //perfect multiplier
 global.combo_multiplier = 1; //item effect for combo multiplier
