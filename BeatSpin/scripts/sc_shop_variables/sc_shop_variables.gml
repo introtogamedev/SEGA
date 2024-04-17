@@ -1,6 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 global.in_shop = true;
+global.thick_line = false;
 
 function button_feedback(object) {
 	if (mouse_check_button_released(mb_left) && mouse_x > object.x && mouse_x < object.x+object.sprite_width 
