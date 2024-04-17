@@ -8,5 +8,10 @@ if (keyboard_check(ord(key))) {
 	image_alpha = 0;
 }
 
+if (global.thick_line) {
+	image_yscale = 1.5;
+} else {
+	image_yscale = 1;
+}
 
 
