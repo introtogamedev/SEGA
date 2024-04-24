@@ -1,17 +1,15 @@
 ///Set songposition
 
-if (playing) {
+if (playing && !global.is_paused) {
 	
 
 if (keyboard_check_pressed(vk_escape)) {
-	if (!global.is_paused) {
-		audio_pause_sound(song);
-		global.is_paused = true;
-	}
+	audio_pause_sound(song);
+	global.is_paused = true;
 }
 
 	
-var _songposition = audio_sound_get_track_position(song)*1000  //in milliseconds
+var _songposition = audio_sound_get_track_position(song)*1000;  //in milliseconds
 
 ///Create Notes
 if (!ds_queue_empty(column1) && abs(_songposition - ds_queue_head(column1) + global.offset) <= leeway) {
