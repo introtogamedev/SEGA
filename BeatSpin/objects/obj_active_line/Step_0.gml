@@ -9,9 +9,9 @@ if (keyboard_check(ord(key))) {
 }
 
 if (global.thick_line) {
-	image_yscale = 1.5;
+	image_yscale = 4;
 } else {
-	image_yscale = 1;
+	image_yscale = 2;
 }
 
 

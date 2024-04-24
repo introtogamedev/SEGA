@@ -3,12 +3,12 @@
 
 if (global.thick_line = false) {
 	image_index = 0;
-	image_yscale = 1;
+	image_yscale = 2;
 	global.framing = 60;
 } else {
 	image_index = 1;
-	image_yscale = 1.5;
-	global.framing = 90;
+	image_yscale = 4;
+	global.framing = 120;
 }
 
 
