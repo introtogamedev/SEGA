@@ -6,6 +6,7 @@ if (mouse_x > x && mouse_x < x+sprite_width && mouse_y > y && mouse_y < y+sprite
 	
 	if (mouse_check_button_released(mb_left) && ITEM_BOUGHT = false && obj_note_manager.my_score >= ITEM_COST) {
 		ITEM_BOUGHT = true;
+		audio_play_sound(snd_kaching,1,false);
 		obj_note_manager.my_score -= ITEM_COST;
 	}
 } else {

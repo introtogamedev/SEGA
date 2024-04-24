@@ -18,7 +18,7 @@ notes6 = ds_list_create();
 
 difficulty = 0;
 
-if (file_exists(_file_name+".bsp")) { //this only works with one song
+if (file_exists(_file_name+".bsp")) {
 	var _file = file_text_open_read(_file_name+".bsp");
 	show_debug_message(_file_name)
 	while (!file_text_eof(_file)) {
