@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_lineshop",
-  "bbox_bottom": 254,
+  "bbox_bottom": 255,
   "bbox_left": 0,
-  "bbox_right": 254,
+  "bbox_right": 255,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -19,7 +19,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 255,
+  "height": 256,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b3295504-087f-4920-87b3-24a65a765bdc","blendMode":0,"displayName":"Layer 6","isLocked":false,"opacity":27.0,"visible":true,},
@@ -80,5 +80,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 255,
+  "width": 256,
 }
