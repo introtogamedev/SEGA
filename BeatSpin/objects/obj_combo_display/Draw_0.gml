@@ -14,9 +14,15 @@ if (timer >= 60)
 }
 
 draw_set_halign(fa_center);
+draw_set_color(c_yellow);
+draw_set_font(fnt_casino_fancy);
+
+draw_text_transformed(room_width/2, placement, "COMBO", 4, 4, 0);
+draw_text_transformed(room_width/2, placement + 50 + 7, global.combo, 6, 6, 0);
+
 draw_set_color(c_maroon);
-draw_text_transformed(room_width/2, placement, "COMBO", 3, 3, 0);
-draw_text_transformed(room_width/2, placement + 40, global.combo, 5, 5, 0);
+draw_text_transformed(room_width/2, placement, "COMBO", 4, 4, 0);
+draw_text_transformed(room_width/2, placement + 50, global.combo, 6, 6, 0);
 
 
 

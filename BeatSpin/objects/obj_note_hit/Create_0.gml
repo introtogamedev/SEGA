@@ -5,7 +5,7 @@ if (global.accuracy = 1)
 	image_yscale = 2;
 	
 	//color editor
-	var _col = c_red;
+	var _col = c_red; //red
 	var _hue = colour_get_hue(_col);
 	var _sat = colour_get_saturation(_col);
 	var _val = colour_get_value(_col);
@@ -19,8 +19,8 @@ else
 	image_xscale = 1;
 	image_yscale = 1;
 	
-	//color editor
-	var _col = c_white;
+	//color editor 
+	var _col = c_white; //yellow
 	var _hue = colour_get_hue(_col);
 	var _sat = colour_get_saturation(_col);
 	var _val = colour_get_value(_col);
