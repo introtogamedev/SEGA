@@ -12,6 +12,10 @@ if (mouse_x > x && mouse_x < x+sprite_width && mouse_y > y && mouse_y < y+sprite
 	image_index = 0;
 }
 
+if (ITEM_BOUGHT) {
+	image_index = 2;
+}
+
 if (global.in_shop) {
 	visible = true;
 	x = x_pos;
