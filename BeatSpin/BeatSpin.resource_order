@@ -24,6 +24,7 @@
     {"name":"spr_lever","order":8,"path":"sprites/spr_lever/spr_lever.yy",},
     {"name":"spr_lineshop","order":15,"path":"sprites/spr_lineshop/spr_lineshop.yy",},
     {"name":"obj_shop","order":13,"path":"objects/obj_shop/obj_shop.yy",},
+    {"name":"fnt_casino_fancy","order":1,"path":"fonts/fnt_casino_fancy/fnt_casino_fancy.yy",},
     {"name":"obj_backgroundoverlay","order":5,"path":"objects/obj_backgroundoverlay/obj_backgroundoverlay.yy",},
     {"name":"sc_pauser","order":4,"path":"scripts/sc_pauser/sc_pauser.yy",},
     {"name":"obj_lever","order":7,"path":"objects/obj_lever/obj_lever.yy",},
