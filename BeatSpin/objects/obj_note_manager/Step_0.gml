@@ -123,22 +123,22 @@ var _spawn_y = (200 * _note_speed_mult);
 
 
 for (var _i = 0; _i < ds_list_size(notes1); _i++) {
-	notes1[|_i].y = _spawn_y + (_songposition-notes1[|_i].position) * _note_speed - global.offset//_offset;
+	notes1[|_i].y = _spawn_y + (_songposition-notes1[|_i].position) * _note_speed - (global.offset / _note_speed_mult)//_offset;
 }
 for (var _i = 0; _i < ds_list_size(notes2); _i++) {
-	notes2[|_i].y = _spawn_y + (_songposition-notes2[|_i].position) * _note_speed - global.offset//_offset;
+	notes2[|_i].y = _spawn_y + (_songposition-notes2[|_i].position) * _note_speed - (global.offset / _note_speed_mult)//_offset;
 }
 for (var _i = 0; _i < ds_list_size(notes3); _i++) {
-	notes3[|_i].y = _spawn_y + (_songposition-notes3[|_i].position) * _note_speed - global.offset//_offset;
+	notes3[|_i].y = _spawn_y + (_songposition-notes3[|_i].position) * _note_speed - (global.offset / _note_speed_mult)//_offset;
 }
 for (var _i = 0; _i < ds_list_size(notes4); _i++) {
-	notes4[|_i].y = _spawn_y + (_songposition-notes4[|_i].position) * _note_speed - global.offset//_offset;
+	notes4[|_i].y = _spawn_y + (_songposition-notes4[|_i].position) * _note_speed - (global.offset / _note_speed_mult)//_offset;
 }
 for (var _i = 0; _i < ds_list_size(notes5); _i++) {
-	notes5[|_i].y = _spawn_y + (_songposition-notes5[|_i].position) * _note_speed - global.offset//_offset;
+	notes5[|_i].y = _spawn_y + (_songposition-notes5[|_i].position) * _note_speed - (global.offset / _note_speed_mult)//_offset;
 }
 for (var _i = 0; _i < ds_list_size(notes6); _i++) {
-	notes6[|_i].y = _spawn_y + (_songposition-notes6[|_i].position) * _note_speed - global.offset//_offset;
+	notes6[|_i].y = _spawn_y + (_songposition-notes6[|_i].position) * _note_speed - (global.offset / _note_speed_mult)//_offset;
 }
 
 

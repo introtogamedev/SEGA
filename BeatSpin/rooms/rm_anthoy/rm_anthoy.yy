@@ -39,6 +39,7 @@
     {"name":"inst_1D52C59A","path":"rooms/rm_anthoy/rm_anthoy.yy",},
     {"name":"inst_6D284BDB","path":"rooms/rm_anthoy/rm_anthoy.yy",},
     {"name":"inst_9A0AF56","path":"rooms/rm_anthoy/rm_anthoy.yy",},
+    {"name":"inst_187350D9","path":"rooms/rm_anthoy/rm_anthoy.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -56,6 +57,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_9A0AF56","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_pause_button","path":"objects/obj_pause_button/obj_pause_button.yy",},"properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_pause_button","path":"objects/obj_pause_button/obj_pause_button.yy",},"propertyId":{"name":"purpose","path":"objects/obj_pause_button/obj_pause_button.yy",},"value":"leave",},
           ],"rotation":0.0,"scaleX":6.0,"scaleY":3.0,"x":683.0,"y":640.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_187350D9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_lineshop","path":"objects/obj_lineshop/obj_lineshop.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1504.0,"y":320.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"particles","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"slot_machine","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
