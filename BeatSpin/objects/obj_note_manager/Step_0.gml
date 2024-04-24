@@ -676,6 +676,7 @@ if (!audio_is_playing(song)) {
 	global.combo = 0; //reset combo
 	
 	global.money += my_score;
+	my_score = 0;
 	
 }
 	
