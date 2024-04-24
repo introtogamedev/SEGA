@@ -17,6 +17,7 @@ else if (global.money >= rich_money)
 }
 else if (global.money < 0)
 {
+	show_debug_message("negative");
 	draw_set_color(c_red);
 	draw_text_ext_transformed(x+20,y+50,obj_mascot.bad_dialogue[random_dia],-1,sprite_width - _width,_size,_size,0);
 }
