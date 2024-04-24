@@ -15,8 +15,10 @@ function do_something() {
 				instance_destroy();
 			}
 			
+			global.money += obj_note_manager.my_score;
+			obj_note_manager.my_score = 0;
 			obj_note_manager.start_song(obj_note_manager.difficulty+1);
-	
+			
 
 		break;
 		
@@ -29,6 +31,7 @@ function do_something() {
 			global.combo = 0; //reset combo
 	
 			global.money += obj_note_manager.my_score;
+			obj_note_manager.my_score = 0;
 			
 			with (obj_notes) {
 				instance_destroy();

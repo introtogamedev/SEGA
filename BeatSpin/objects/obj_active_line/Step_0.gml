@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-if (keyboard_check(ord(key))) {
+if (keyboard_check(ord(key)) && !global.is_paused) {
 	image_alpha = 1;
 } else {
 	image_alpha = 0;
