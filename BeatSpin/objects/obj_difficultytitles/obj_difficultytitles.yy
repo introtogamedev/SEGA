@@ -32,5 +32,5 @@
     "path": "sprites/spr_difficultytitles/spr_difficultytitles.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

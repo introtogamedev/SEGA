@@ -2,10 +2,8 @@
 // You can write your code in this editor
 
 x = 224;
-y = 100;
+y = 300;
 
 
 
-
-
-
+visible = false;

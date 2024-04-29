@@ -26,6 +26,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"ShopStuf","folderPath":"folders/Sprites/ShopStuf.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"easy.bsp","CopyToMask":-1,"filePath":"datafiles",},
@@ -94,6 +95,7 @@
     {"id":{"name":"obj_lineshop","path":"objects/obj_lineshop/obj_lineshop.yy",},},
     {"id":{"name":"obj_button_parent","path":"objects/obj_button_parent/obj_button_parent.yy",},},
     {"id":{"name":"spr_difficultytitles","path":"sprites/spr_difficultytitles/spr_difficultytitles.yy",},},
+    {"id":{"name":"spr_combomultiplier","path":"sprites/spr_combomultiplier/spr_combomultiplier.yy",},},
     {"id":{"name":"obj_controls","path":"objects/obj_controls/obj_controls.yy",},},
     {"id":{"name":"spr_button_white","path":"sprites/spr_button_white/spr_button_white.yy",},},
     {"id":{"name":"obj_frame","path":"objects/obj_frame/obj_frame.yy",},},
