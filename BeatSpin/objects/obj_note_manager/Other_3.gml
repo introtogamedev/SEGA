@@ -8,6 +8,8 @@ if (file_exists(working_directory + "save.txt")) {
 }
 var _file = file_text_open_write(working_directory + "save.txt");
 file_text_write_string(_file, global.money);
+file_text_write_string(_file, "\n");
+file_text_write_string(_file, global.offset);
 file_text_close(_file);
 
 

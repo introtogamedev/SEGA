@@ -37,7 +37,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.11.1.129",
+    "IDEVersion": "2023.8.2.108",
   },
   "resources": [
     {"id":{"name":"obj_offset_manager","path":"objects/obj_offset_manager/obj_offset_manager.yy",},},
@@ -75,6 +75,7 @@
     {"id":{"name":"rm_shop","path":"rooms/rm_shop/rm_shop.yy",},},
     {"id":{"name":"spr_hit_note","path":"sprites/spr_hit_note/spr_hit_note.yy",},},
     {"id":{"name":"rm_anthoy","path":"rooms/rm_anthoy/rm_anthoy.yy",},},
+    {"id":{"name":"snd_money_lost","path":"sounds/snd_money_lost/snd_money_lost.yy",},},
     {"id":{"name":"spr_button_red","path":"sprites/spr_button_red/spr_button_red.yy",},},
     {"id":{"name":"Laur_Metamorphose","path":"sounds/Laur_Metamorphose/Laur_Metamorphose.yy",},},
     {"id":{"name":"fnt_casino","path":"fonts/fnt_casino/fnt_casino.yy",},},
