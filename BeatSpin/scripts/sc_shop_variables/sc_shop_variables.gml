@@ -2,6 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 global.in_shop = true;
 global.thick_line = false;
+global.combo_saver = 0;
 
 function button_feedback(object) {
 	if (mouse_check_button_released(mb_left) && mouse_x > object.x && mouse_x < object.x+object.sprite_width 
