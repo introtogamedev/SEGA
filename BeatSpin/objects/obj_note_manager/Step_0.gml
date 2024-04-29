@@ -668,7 +668,16 @@ if (!ds_list_empty(notes6))
 	}
 }
 
+
+
 if (!audio_is_playing(song)) {
+	
+	end_song = true;
+	
+	show_debug_message(my_score - my_my_score)
+	if (my_score - my_my_score >= 0)	audio_play_sound(snd_money,1,false);
+	else if (my_score - my_my_score < 0)	audio_play_sound(snd_money_lost,1,false);
+	
 	obj_lever.state = 0;
 	playing = false;
 	
