@@ -27,13 +27,4 @@ if (!ds_queue_empty(column6) && abs(_songposition - ds_queue_head(column6)) <= l
 }(
 */
 
-if (end_song) {
-	var _placement = room_height/2 - 50;
-	draw_set_halign(fa_center);
-	draw_set_color(c_yellow);
-	draw_set_font(fnt_casino);
 
-	draw_text_transformed(room_width/2, _placement + 4, "You earned:", 4, 4, 0);
-	draw_text_transformed(room_width/2, _placement + 50 + 4, "$" + string(my_score - my_my_score) + "!", 6, 6, 0);
-
-}
