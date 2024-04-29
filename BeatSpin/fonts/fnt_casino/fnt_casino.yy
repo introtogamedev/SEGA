@@ -111,7 +111,7 @@
     "9647": {"character":9647,"h":19,"offset":3,"shift":16,"w":10,"x":57,"y":65,},
   },
   "hinting": 0,
-  "includeTTF": true,
+  "includeTTF": false,
   "interpreter": 0,
   "italic": false,
   "kerningPairs": [
@@ -311,6 +311,6 @@
     "name": "Default",
     "path": "texturegroups/Default",
   },
-  "TTFName": "${project_dir}\\fonts\\fnt_casino\\AmericanCaptain-MdEY.otf",
+  "TTFName": "",
   "usesSDF": false,
 }

@@ -343,16 +343,24 @@ if (!ds_list_empty(notes1))
 		else 
 		{
 			//miss
-			my_score -= 20;
-			global.combo = 0;
+			if (global.combo_saver > 0) {
+				global.combo_saver--;
+			} else {
+				my_score -= 20;
+				global.combo = 0;
+			}
 		}
 	}
 	//if note goes offscreen
 	for (var _i = 0; _i < ds_list_size(notes1); _i++) {
 		if (notes1[|_i].y > _offscreen) 
 		{
-			my_score -= 20;
-			global.combo = 0;
+			if (global.combo_saver > 0) {
+				global.combo_saver--;
+			} else {
+				my_score -= 20;
+				global.combo = 0;
+			}
 			
 			var _remove = notes1[|_i];
 			ds_list_delete(notes1,_i);
@@ -404,16 +412,24 @@ if (!ds_list_empty(notes2))
 		else 
 		{
 			//miss
-			my_score -= 20;
-			global.combo = 0;
+			if (global.combo_saver > 0) {
+				global.combo_saver--;
+			} else {
+				my_score -= 20;
+				global.combo = 0;
+			}
 		}
 	}
 	//if note goes offscreen
 	for (var _i = 0; _i < ds_list_size(notes2); _i++) {
 		if (notes2[|_i].y > _offscreen) 
 		{
-			my_score -= 20;
-			global.combo = 0;
+			if (global.combo_saver > 0) {
+				global.combo_saver--;
+			} else {
+				my_score -= 20;
+				global.combo = 0;
+			}
 			
 			var _remove = notes2[|_i];
 			ds_list_delete(notes2,_i);
@@ -466,16 +482,24 @@ if (!ds_list_empty(notes3))
 		else 
 		{
 			//miss
-			my_score -= 20;
-			global.combo = 0;
+			if (global.combo_saver > 0) {
+				global.combo_saver--;
+			} else {
+				my_score -= 20;
+				global.combo = 0;
+			}
 		}
 	}
 	//if note goes offscreen
 	for (var _i = 0; _i < ds_list_size(notes3); _i++) {
 		if (notes3[|_i].y > _offscreen)
 		{
-			my_score -= 20;
-			global.combo = 0;
+			if (global.combo_saver > 0) {
+				global.combo_saver--;
+			} else {
+				my_score -= 20;
+				global.combo = 0;
+			}
 			
 			var _remove = notes3[|_i];
 			ds_list_delete(notes3,_i);
@@ -528,16 +552,24 @@ if (!ds_list_empty(notes4))
 		else 
 		{
 			//miss
-			my_score -= 20;
-			global.combo = 0;
+			if (global.combo_saver > 0) {
+				global.combo_saver--;
+			} else {
+				my_score -= 20;
+				global.combo = 0;
+			}
 		}
 	}
 	//if note goes offscreen
 	for (var _i = 0; _i < ds_list_size(notes4); _i++) {
 		if (notes4[|_i].y > _offscreen) 
 		{
-			my_score -= 20;
-			global.combo = 0;
+			if (global.combo_saver > 0) {
+				global.combo_saver--;
+			} else {
+				my_score -= 20;
+				global.combo = 0;
+			}
 			
 			var _remove = notes4[|_i];			
 			ds_list_delete(notes4,_i);
@@ -589,16 +621,24 @@ if (!ds_list_empty(notes5))
 		else 
 		{
 			//miss
-			my_score -= 20;
-			global.combo = 0;
+			if (global.combo_saver > 0) {
+				global.combo_saver--;
+			} else {
+				my_score -= 20;
+				global.combo = 0;
+			}
 		}
 	}
 	//if note goes offscreen
 	for (var _i = 0; _i < ds_list_size(notes5); _i++) {
 		if (notes5[|_i].y > _offscreen) 
 		{
-			my_score -= 20;
-			global.combo = 0;
+			if (global.combo_saver > 0) {
+				global.combo_saver--;
+			} else {
+				my_score -= 20;
+				global.combo = 0;
+			}
 			
 			var _remove = notes5[|_i];
 			ds_list_delete(notes5,_i);
@@ -649,16 +689,24 @@ if (!ds_list_empty(notes6))
 		else 
 		{
 			//miss
-			my_score -= 20;
-			global.combo = 0;
+			if (global.combo_saver > 0) {
+				global.combo_saver--;
+			} else {
+				my_score -= 20;
+				global.combo = 0;
+			}
 		}
 	}
 	//if note goes offscreen
 	for (var _i = 0; _i < ds_list_size(notes6); _i++) {
 		if (notes6[|_i].y > _offscreen)
 		{
-			my_score -= 20;
-			global.combo = 0;
+			if (global.combo_saver > 0) {
+				global.combo_saver--;
+			} else {
+				my_score -= 20;
+				global.combo = 0;
+			}
 			
 			var _remove = notes6[|_i];
 			ds_list_delete(notes6,_i);
@@ -667,7 +715,6 @@ if (!ds_list_empty(notes6))
 		}
 	}
 }
-
 
 
 if (!audio_is_playing(song)) {
