@@ -70,12 +70,15 @@ function start_song(_difficulty) {
 				difficulty = 3;
 		break;
 	}
+	my_my_score = my_score;
 	leeway = 3000; //Makes sure notes are missed by the creatpr;
 	playing = true;
 }
 
 
 my_score = 0;
+my_my_score = 0;
 playing = false;
 song = pointer_null;
 
+end_song = false;

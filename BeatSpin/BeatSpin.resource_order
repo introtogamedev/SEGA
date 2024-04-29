@@ -50,6 +50,7 @@
     {"name":"rm_shop","order":2,"path":"rooms/rm_shop/rm_shop.yy",},
     {"name":"spr_hit_note","order":12,"path":"sprites/spr_hit_note/spr_hit_note.yy",},
     {"name":"rm_anthoy","order":3,"path":"rooms/rm_anthoy/rm_anthoy.yy",},
+    {"name":"snd_money_lost","order":6,"path":"sounds/snd_money_lost/snd_money_lost.yy",},
     {"name":"spr_button_red","order":4,"path":"sprites/spr_button_red/spr_button_red.yy",},
     {"name":"Laur_Metamorphose","order":1,"path":"sounds/Laur_Metamorphose/Laur_Metamorphose.yy",},
     {"name":"spr_backgroundoverlay","order":6,"path":"sprites/spr_backgroundoverlay/spr_backgroundoverlay.yy",},
