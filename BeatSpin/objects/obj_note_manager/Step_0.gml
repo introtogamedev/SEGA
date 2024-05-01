@@ -306,31 +306,32 @@ if (!ds_list_empty(notes1))
 {
 	//reset index and distance
 	var _index = -1;
-	var _distance = leeway + 1
+	var _distance = global.framing + 91;
 
 	//check for closest note
 	for (var _j = 0; _j < ds_list_size(notes1); _j++) {
-		if (abs(notes1[|_j].y - obj_line.y) < global.framing) {
+		if (abs(notes1[|_j].y - obj_line.y) < _distance) {
 			//perfect
-			global.accuracy = 1;
 			_index = _j;
-			_distance = abs(notes1[|_j].position - _songposition);
-		}
-		else if (abs(notes1[|_j].y - obj_line.y) < global.framing + 60) {
-			//great
-			global.accuracy = 0.5;
-			_index = _j;
-			_distance = abs(notes1[|_j].position - _songposition);
-		}
-		else if (abs(notes1[|_j].y - obj_line.y) < global.framing + 90) {
-			//miss
-			_index = -1;
+			_distance = abs(notes1[|_j].y - obj_line.y);
 		}
 	}
+	
+	if (_distance < 30) {
+		//perfect
+		global.accuracy = 1;
+	} else if (_distance < 60) {
+		//great
+		global.accuracy = 0.5;
+	} else {
+		//miss
+		_index = -2;
+	}
+	
 	//if key pressed during time frame
 	if (keyboard_check_pressed(ord("S")) && !ds_list_empty(notes1))
 	{
-		if (_index != -1)
+		if (_index >= 0)
 		{
 			sc_combo();
 			var _remove = notes1[|_index];
@@ -340,7 +341,7 @@ if (!ds_list_empty(notes1))
 			ds_list_delete(notes1,_index);
 			instance_destroy(_remove);
 		}
-		else 
+		else if (_index == -2)
 		{
 			//miss
 			if (global.combo_saver > 0) {
@@ -374,31 +375,32 @@ if (!ds_list_empty(notes2))
 {
 	//reset index and distance
 	var _index = -1;
-	var _distance = leeway + 1
+	var _distance = global.framing + 91;
 
 	//check for closest note
 	for (var _j = 0; _j < ds_list_size(notes2); _j++) {
-		if (abs(notes2[|_j].y - obj_line.y) <  global.framing) {
+		if (abs(notes2[|_j].y - obj_line.y) < _distance) {
 			//perfect
-			global.accuracy = 1;
 			_index = _j;
-			_distance = abs(notes2[|_j].position - _songposition);
-		}
-		else if (abs(notes2[|_j].y - obj_line.y) < global.framing + 60) {
-			//great
-			global.accuracy = 0.5;
-			_index = _j;
-			_distance = abs(notes2[|_j].position - _songposition);
-		}
-		else if (abs(notes2[|_j].y - obj_line.y) < global.framing + 90) {
-			//miss
-			_index = -1;
+			_distance = abs(notes2[|_j].y - obj_line.y);
 		}
 	}
+	
+	if (_distance < 30) {
+		//perfect
+		global.accuracy = 1;
+	} else if (_distance < 60) {
+		//great
+		global.accuracy = 0.5;
+	} else {
+		//miss
+		_index = -2;
+	}
+	
 	//if key pressed during time frame
 	if (keyboard_check_pressed(ord("D")) && !ds_list_empty(notes2))
 	{
-		if (_index != -1)
+		if (_index >= 0)
 		{
 			sc_combo(); //combo function
 			
@@ -409,7 +411,7 @@ if (!ds_list_empty(notes2))
 			ds_list_delete(notes2,_index);
 			instance_destroy(_remove);
 		}
-		else 
+		else if (_index == -2)
 		{
 			//miss
 			if (global.combo_saver > 0) {
@@ -444,31 +446,32 @@ if (!ds_list_empty(notes3))
 {
 	//reset index and distance
 	var _index = -1;
-	var _distance = leeway + 1
+	var _distance = global.framing + 91;
 
 	//check for closest note
 	for (var _j = 0; _j < ds_list_size(notes3); _j++) {
-		if (abs(notes3[|_j].y - obj_line.y) <  global.framing) {
+		if (abs(notes3[|_j].y - obj_line.y) < _distance) {
 			//perfect
-			global.accuracy = 1;
 			_index = _j;
-			_distance = abs(notes3[|_j].position - _songposition);
-		}
-		else if (abs(notes3[|_j].y - obj_line.y) < global.framing + 60) {
-			//great
-			global.accuracy = 0.5;
-			_index = _j;
-			_distance = abs(notes3[|_j].position - _songposition);
-		}
-		else if (abs(notes3[|_j].y - obj_line.y) < global.framing + 90) {
-			//miss
-			_index = -1;
+			_distance = abs(notes3[|_j].y - obj_line.y);
 		}
 	}
+	
+	if (_distance < 30) {
+		//perfect
+		global.accuracy = 1;
+	} else if (_distance < 60) {
+		//great
+		global.accuracy = 0.5;
+	} else {
+		//miss
+		_index = -2;
+	}
+	
 	//if key pressed during time frame
 	if (keyboard_check_pressed(ord("F")) && !ds_list_empty(notes3))
 	{
-		if (_index != -1)
+		if (_index >= 0)
 		{
 			sc_combo(); //combo function
 			var _remove = notes3[|_index];
@@ -479,7 +482,7 @@ if (!ds_list_empty(notes3))
 			ds_list_delete(notes3,_index);
 			instance_destroy(_remove);
 		}
-		else 
+		else if (_index == -2)
 		{
 			//miss
 			if (global.combo_saver > 0) {
@@ -514,31 +517,32 @@ if (!ds_list_empty(notes4))
 {
 	//reset index and distance
 	var _index = -1;
-	var _distance = leeway + 1
+	var _distance = global.framing + 91;
 
 	//check for closest note
 	for (var _j = 0; _j < ds_list_size(notes4); _j++) {
-		if (abs(notes4[|_j].y - obj_line.y) <  global.framing) {
+		if (abs(notes4[|_j].y - obj_line.y) < _distance) {
 			//perfect
-			global.accuracy = 1;
 			_index = _j;
-			_distance = abs(notes4[|_j].position - _songposition);
-		}
-		else if (abs(notes4[|_j].y - obj_line.y) < global.framing + 60) {
-			//great
-			global.accuracy = 0.5;
-			_index = _j;
-			_distance = abs(notes4[|_j].position - _songposition);
-		}
-		else if (abs(notes4[|_j].y - obj_line.y) < global.framing + 90) {
-			//miss
-			_index = -1;
+			_distance = abs(notes4[|_j].y - obj_line.y);
 		}
 	}
+	
+	if (_distance < 30) {
+		//perfect
+		global.accuracy = 1;
+	} else if (_distance < 60) {
+		//great
+		global.accuracy = 0.5;
+	} else {
+		//miss
+		_index = -2;
+	}
+	
 	//if key pressed during time frame
 	if (keyboard_check_pressed(ord("J")) && !ds_list_empty(notes4))
 	{
-		if (_index != -1)
+		if (_index >= 0)
 		{
 			sc_combo(); //combo function
 			var _remove = notes4[|_index];
@@ -549,7 +553,7 @@ if (!ds_list_empty(notes4))
 			ds_list_delete(notes4,_index);
 			instance_destroy(_remove);
 		}
-		else 
+		else if (_index == -2)
 		{
 			//miss
 			if (global.combo_saver > 0) {
@@ -584,31 +588,32 @@ if (!ds_list_empty(notes5))
 {
 	//reset index and distance
 	var _index = -1;
-	var _distance = leeway + 1
+	var _distance = global.framing + 91;
 
 	//check for closest note
 	for (var _j = 0; _j < ds_list_size(notes5); _j++) {
-		if (abs(notes5[|_j].y - obj_line.y) <  global.framing) {
+		if (abs(notes5[|_j].y - obj_line.y) < _distance) {
 			//perfect
-			global.accuracy = 1;
 			_index = _j;
-			_distance = abs(notes5[|_j].position - _songposition);
-		}
-		else if (abs(notes5[|_j].y - obj_line.y) < global.framing + 60) {
-			//great
-			global.accuracy = 0.5;
-			_index = _j;
-			_distance = abs(notes5[|_j].position - _songposition);
-		}
-		else if (abs(notes5[|_j].y - obj_line.y) < global.framing + 90) {
-			//miss
-			_index = -1;
+			_distance = abs(notes5[|_j].y - obj_line.y);
 		}
 	}
-//if key pressed during time frame
+	
+	if (_distance < 30) {
+		//perfect
+		global.accuracy = 1;
+	} else if (_distance < 60) {
+		//great
+		global.accuracy = 0.5;
+	} else {
+		//miss
+		_index = -2;
+	}
+	
+	//if key pressed during time frame
 	if (keyboard_check_pressed(ord("K")) && !ds_list_empty(notes5))
 	{
-		if (_index != -1)
+		if (_index >= 0)
 		{
 			sc_combo(); //combo function
 			var _remove = notes5[|_index];
@@ -618,7 +623,7 @@ if (!ds_list_empty(notes5))
 			ds_list_delete(notes5,_index);
 			instance_destroy(_remove);
 		}
-		else 
+		else if (_index == -2)
 		{
 			//miss
 			if (global.combo_saver > 0) {
@@ -652,31 +657,32 @@ if (!ds_list_empty(notes6))
 {
 	//reset index and distance
 	var _index = -1;
-	var _distance = leeway + 1
+	var _distance = global.framing + 91;
 
 	//check for closest note
 	for (var _j = 0; _j < ds_list_size(notes6); _j++) {
-		if (abs(notes6[|_j].y - obj_line.y) <  global.framing) {
+		if (abs(notes6[|_j].y - obj_line.y) < _distance) {
 			//perfect
-			global.accuracy = 1;
 			_index = _j;
-			_distance = abs(notes6[|_j].position - _songposition);
-		}
-		else if (abs(notes6[|_j].y - obj_line.y) < global.framing + 60) {
-			//great
-			global.accuracy = 0.5;
-			_index = _j;
-			_distance = abs(notes6[|_j].position - _songposition);
-		}
-		else if (abs(notes6[|_j].y - obj_line.y) < global.framing + 90) {
-			//miss
-			_index = -1;
+			_distance = abs(notes6[|_j].y - obj_line.y);
 		}
 	}
+	
+	if (_distance < 30) {
+		//perfect
+		global.accuracy = 1;
+	} else if (_distance < 60) {
+		//great
+		global.accuracy = 0.5;
+	} else {
+		//miss
+		_index = -2;
+	}
+	
 	//if key pressed during time frame
 	if (keyboard_check_pressed(ord("L")) && !ds_list_empty(notes6))
 	{
-		if (_index != -1)
+		if (_index >= 0)
 		{
 			sc_combo(); //combo function
 			var _remove = notes6[|_index];
@@ -686,7 +692,7 @@ if (!ds_list_empty(notes6))
 			ds_list_delete(notes6,_index);
 			instance_destroy(_remove);
 		}
-		else 
+		else if (_index == -2)
 		{
 			//miss
 			if (global.combo_saver > 0) {
