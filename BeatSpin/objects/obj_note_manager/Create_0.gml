@@ -51,22 +51,22 @@ function start_song(_difficulty) {
 	switch (_difficulty) {
 		case 1:
 				song = audio_play_sound(Laur_Metamorphose,1,false);
-				process_notes("easy")
+				process_notes("metamorphose/metamorphose-easy")
 				difficulty = 0;
 		break;
 		case 2:
 				song = audio_play_sound(Laur_Metamorphose,1,false);
-				process_notes("normal")
+				process_notes("metamorphose/metamorphose-normal")
 				difficulty = 1;
 		break;
 		case 3:
 				song = audio_play_sound(Laur_Metamorphose,1,false);
-				process_notes("hard")
+				process_notes("metamorphose/metamorphose-hard")
 				difficulty = 2;
 		break;
 		case 4:
 				song = audio_play_sound(Laur_Metamorphose,1,false);
-				process_notes("impossible")
+				process_notes("metamorphose/metamorphose-expert")
 				difficulty = 3;
 		break;
 	}
