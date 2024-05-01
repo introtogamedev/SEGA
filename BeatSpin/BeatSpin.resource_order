@@ -27,6 +27,7 @@
     {"name":"obj_shop","order":13,"path":"objects/obj_shop/obj_shop.yy",},
     {"name":"obj_backgroundoverlay","order":5,"path":"objects/obj_backgroundoverlay/obj_backgroundoverlay.yy",},
     {"name":"snd_money","order":3,"path":"sounds/snd_money/snd_money.yy",},
+    {"name":"obj_entershop","order":20,"path":"objects/obj_entershop/obj_entershop.yy",},
     {"name":"sc_pauser","order":4,"path":"scripts/sc_pauser/sc_pauser.yy",},
     {"name":"obj_lever","order":7,"path":"objects/obj_lever/obj_lever.yy",},
     {"name":"sc_combo","order":2,"path":"scripts/sc_combo/sc_combo.yy",},
@@ -75,6 +76,7 @@
     {"name":"spr_combomultiplier","order":5,"path":"sprites/spr_combomultiplier/spr_combomultiplier.yy",},
     {"name":"obj_controls","order":17,"path":"objects/obj_controls/obj_controls.yy",},
     {"name":"spr_button_white","order":5,"path":"sprites/spr_button_white/spr_button_white.yy",},
+    {"name":"spr_entershop","order":6,"path":"sprites/spr_entershop/spr_entershop.yy",},
     {"name":"obj_frame","order":1,"path":"objects/obj_frame/obj_frame.yy",},
   ],
 }

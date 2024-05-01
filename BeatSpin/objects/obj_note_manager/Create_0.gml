@@ -71,7 +71,7 @@ function start_song(_difficulty) {
 		break;
 	}
 	my_my_score = my_score;
-	leeway = 3000; //Makes sure notes are missed by the creatpr;
+	leeway = 3000; //Makes sure notes aren't missed by the creatpr;
 	playing = true;
 }
 
