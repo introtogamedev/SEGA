@@ -18,11 +18,11 @@ if (end_song) {
 	draw_set_font(fnt_casino_fancy);
 
 	draw_text_transformed(room_width/2, _placement + 4, "You earned:", 1, 1, 0);
-	draw_text_transformed(room_width/2, _placement + 50 + 4, "$" + string(my_score - my_my_score) + "!", 1.5, 1.5, 0);
+	draw_text_transformed(room_width/2, _placement + 55 + 4, "$" + string(my_score - my_my_score) + "!", 1.5, 1.5, 0);
 	
 	draw_set_color(c_maroon);
-	draw_text_transformed(room_width/2, _placement - 4, "You earned:", 1, 1, 0);
-	draw_text_transformed(room_width/2, _placement + 50 - 4, "$" + string(my_score - my_my_score) + "!", 1.5, 1.5, 0);
+	draw_text_transformed(room_width/2, _placement - 2, "You earned:", 1, 1, 0);
+	draw_text_transformed(room_width/2, _placement + 55 - 2, "$" + string(my_score - my_my_score) + "!", 1.5, 1.5, 0);
 
 }
 

@@ -41,6 +41,7 @@
     {"name":"inst_9A0AF56","path":"rooms/rm_anthoy/rm_anthoy.yy",},
     {"name":"inst_585BC681","path":"rooms/rm_anthoy/rm_anthoy.yy",},
     {"name":"inst_1D53E16F","path":"rooms/rm_anthoy/rm_anthoy.yy",},
+    {"name":"inst_1DAD3882","path":"rooms/rm_anthoy/rm_anthoy.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -60,6 +61,7 @@
           ],"rotation":0.0,"scaleX":6.0,"scaleY":3.0,"x":683.0,"y":640.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_585BC681","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_lineshop","path":"objects/obj_lineshop/obj_lineshop.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-448.0,"y":256.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1D53E16F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_difficultytitles","path":"objects/obj_difficultytitles/obj_difficultytitles.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":192.0,"y":192.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1DAD3882","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_cmshop","path":"objects/obj_cmshop/obj_cmshop.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-672.0,"y":544.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"particles","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"slot_machine","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
