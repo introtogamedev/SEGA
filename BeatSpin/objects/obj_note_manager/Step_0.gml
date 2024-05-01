@@ -723,6 +723,7 @@ if (!ds_list_empty(notes6))
 if (!audio_is_playing(song)) {
 	
 	end_song = true;
+	alarm[0] = game_get_speed(gamespeed_fps) * 5;
 	
 	if (my_score - my_my_score >= 0)	audio_play_sound(snd_money,1,false);
 	else if (my_score - my_my_score < 0)	audio_play_sound(snd_money_lost,1,false);
