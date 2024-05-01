@@ -111,7 +111,7 @@
     "9647": {"character":9647,"h":18,"offset":3,"shift":16,"w":10,"x":208,"y":62,},
   },
   "hinting": 0,
-  "includeTTF": false,
+  "includeTTF": true,
   "interpreter": 0,
   "italic": false,
   "kerningPairs": [
@@ -144,6 +144,7 @@
     {"amount":-1,"first":84,"second":58,},
     {"amount":-1,"first":84,"second":59,},
     {"amount":-1,"first":84,"second":65,},
+    {"amount":-1,"first":84,"second":95,},
     {"amount":-1,"first":84,"second":97,},
     {"amount":-1,"first":84,"second":99,},
     {"amount":-1,"first":84,"second":101,},
@@ -169,6 +170,7 @@
     {"amount":-1,"first":89,"second":58,},
     {"amount":-1,"first":89,"second":59,},
     {"amount":-1,"first":89,"second":65,},
+    {"amount":-1,"first":89,"second":95,},
     {"amount":-1,"first":89,"second":97,},
     {"amount":-1,"first":89,"second":101,},
     {"amount":-1,"first":89,"second":111,},
@@ -208,6 +210,6 @@
     "name": "Default",
     "path": "texturegroups/Default",
   },
-  "TTFName": "",
+  "TTFName": "${project_dir}\\fonts\\fnt_casino\\AmericanCaptain-MdEY.otf",
   "usesSDF": false,
 }
