@@ -6,7 +6,13 @@ var _current_state = state;
 
 obj_difficultytitles.visible = false;
 
-if (pull_lever() && state != -1)
+if (pull_lever()) {
+	holding = true;
+} else if (holding) {
+	holding = mouse_check_button(mb_left);
+}
+
+if (holding && state != -1)
 {
 	
 	if (mouse_y_start_pos == 0) mouse_y_start_pos = mouse_y;

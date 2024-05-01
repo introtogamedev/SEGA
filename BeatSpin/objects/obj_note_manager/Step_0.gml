@@ -306,7 +306,7 @@ if (!ds_list_empty(notes1))
 {
 	//reset index and distance
 	var _index = -1;
-	var _distance = global.framing + 91;
+	var _distance = global.framing + 61;
 
 	//check for closest note
 	for (var _j = 0; _j < ds_list_size(notes1); _j++) {
@@ -317,10 +317,10 @@ if (!ds_list_empty(notes1))
 		}
 	}
 	
-	if (_distance < 30) {
+	if (_distance < global.framing) {
 		//perfect
 		global.accuracy = 1;
-	} else if (_distance < 60) {
+	} else if (_distance < 60 + global.framing) {
 		//great
 		global.accuracy = 0.5;
 	} else {
@@ -333,7 +333,7 @@ if (!ds_list_empty(notes1))
 	{
 		if (_index >= 0)
 		{
-			sc_combo();
+			sc_combo(); //combo function
 			var _remove = notes1[|_index];
 			
 			instance_create_layer(_remove.x - 40,_remove.y + 40,"particles", obj_note_hit);
@@ -375,7 +375,7 @@ if (!ds_list_empty(notes2))
 {
 	//reset index and distance
 	var _index = -1;
-	var _distance = global.framing + 91;
+	var _distance = global.framing + 61;
 
 	//check for closest note
 	for (var _j = 0; _j < ds_list_size(notes2); _j++) {
@@ -386,10 +386,10 @@ if (!ds_list_empty(notes2))
 		}
 	}
 	
-	if (_distance < 30) {
+	if (_distance < global.framing) {
 		//perfect
 		global.accuracy = 1;
-	} else if (_distance < 60) {
+	} else if (_distance < 60 + global.framing) {
 		//great
 		global.accuracy = 0.5;
 	} else {
@@ -403,7 +403,6 @@ if (!ds_list_empty(notes2))
 		if (_index >= 0)
 		{
 			sc_combo(); //combo function
-			
 			var _remove = notes2[|_index];
 			
 			instance_create_layer(_remove.x - 40,_remove.y + 40,"particles", obj_note_hit);
@@ -446,7 +445,7 @@ if (!ds_list_empty(notes3))
 {
 	//reset index and distance
 	var _index = -1;
-	var _distance = global.framing + 91;
+	var _distance = global.framing + 61;
 
 	//check for closest note
 	for (var _j = 0; _j < ds_list_size(notes3); _j++) {
@@ -457,10 +456,10 @@ if (!ds_list_empty(notes3))
 		}
 	}
 	
-	if (_distance < 30) {
+	if (_distance < global.framing) {
 		//perfect
 		global.accuracy = 1;
-	} else if (_distance < 60) {
+	} else if (_distance < 60 + global.framing) {
 		//great
 		global.accuracy = 0.5;
 	} else {
@@ -477,7 +476,6 @@ if (!ds_list_empty(notes3))
 			var _remove = notes3[|_index];
 			
 			instance_create_layer(_remove.x - 40,_remove.y + 40,"particles", obj_note_hit);
-			
 			
 			ds_list_delete(notes3,_index);
 			instance_destroy(_remove);
@@ -517,7 +515,7 @@ if (!ds_list_empty(notes4))
 {
 	//reset index and distance
 	var _index = -1;
-	var _distance = global.framing + 91;
+	var _distance = global.framing + 61;
 
 	//check for closest note
 	for (var _j = 0; _j < ds_list_size(notes4); _j++) {
@@ -528,10 +526,10 @@ if (!ds_list_empty(notes4))
 		}
 	}
 	
-	if (_distance < 30) {
+	if (_distance < global.framing) {
 		//perfect
 		global.accuracy = 1;
-	} else if (_distance < 60) {
+	} else if (_distance < 60 + global.framing) {
 		//great
 		global.accuracy = 0.5;
 	} else {
@@ -548,7 +546,6 @@ if (!ds_list_empty(notes4))
 			var _remove = notes4[|_index];
 			
 			instance_create_layer(_remove.x - 40,_remove.y + 40,"particles", obj_note_hit);
-			
 			
 			ds_list_delete(notes4,_index);
 			instance_destroy(_remove);
@@ -588,7 +585,7 @@ if (!ds_list_empty(notes5))
 {
 	//reset index and distance
 	var _index = -1;
-	var _distance = global.framing + 91;
+	var _distance = global.framing + 61;
 
 	//check for closest note
 	for (var _j = 0; _j < ds_list_size(notes5); _j++) {
@@ -599,10 +596,10 @@ if (!ds_list_empty(notes5))
 		}
 	}
 	
-	if (_distance < 30) {
+	if (_distance < global.framing) {
 		//perfect
 		global.accuracy = 1;
-	} else if (_distance < 60) {
+	} else if (_distance < 60 + global.framing) {
 		//great
 		global.accuracy = 0.5;
 	} else {
@@ -657,7 +654,7 @@ if (!ds_list_empty(notes6))
 {
 	//reset index and distance
 	var _index = -1;
-	var _distance = global.framing + 91;
+	var _distance = global.framing + 61;
 
 	//check for closest note
 	for (var _j = 0; _j < ds_list_size(notes6); _j++) {
@@ -668,10 +665,10 @@ if (!ds_list_empty(notes6))
 		}
 	}
 	
-	if (_distance < 30) {
+	if (_distance < global.framing) {
 		//perfect
 		global.accuracy = 1;
-	} else if (_distance < 60) {
+	} else if (_distance < 60 + global.framing) {
 		//great
 		global.accuracy = 0.5;
 	} else {
