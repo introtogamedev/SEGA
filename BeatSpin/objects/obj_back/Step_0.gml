@@ -14,6 +14,7 @@ if (global.in_shop) {
 	if (cooldown_timer <= 0) {
 		if (button_feedback(obj_back) == "released") {
 			global.in_shop = false;
+			audio_play_sound(snd_lever_pull,1,false);
 			image_index = 0;
 		}
 		else if (button_feedback(obj_back) == "pressed") {

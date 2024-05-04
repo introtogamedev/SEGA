@@ -1,6 +1,6 @@
 event_inherited();
 
-x_pos = 390;
+x_pos = 394;
 y_pos = 223;
 
 

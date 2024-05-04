@@ -3,6 +3,7 @@
 global.in_shop = false;
 global.thick_line = false;
 global.combo_mult = false;
+global.song_bought = false;
 //global.combo_saver = 0;
 
 function button_feedback(object) {

@@ -4,10 +4,12 @@
 if (mouse_x > x && mouse_x < x+sprite_width && mouse_y > y && mouse_y < y+sprite_height) {
 	image_index = 1;
 	
-	if (mouse_check_button_released(mb_left) && item_bought = false && obj_note_manager.my_score >= ITEM_COST) {
+	//show_debug_message(string(global.money));
+	
+	if (mouse_check_button_released(mb_left) && item_bought == false && global.money >= item_cost) {
 		item_bought = true;
 		audio_play_sound(snd_kaching,1,false);
-		obj_note_manager.my_score -= item_cost;
+		global.money -= item_cost;
 	}
 } else {
 	image_index = 0; 

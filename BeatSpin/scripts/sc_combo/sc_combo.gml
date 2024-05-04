@@ -7,4 +7,6 @@ function sc_combo(){
 	global.combo ++;
 	obj_note_manager.my_score += (10 * global.accuracy) + (global.combo * global.combo_multiplier)/10; //combo score
 	obj_note_manager.my_score = int64(obj_note_manager.my_score);
+	
+	show_debug_message(string((10 * global.accuracy) + (global.combo * global.combo_multiplier)/10));
 }
