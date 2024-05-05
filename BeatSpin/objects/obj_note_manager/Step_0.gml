@@ -682,6 +682,7 @@ if (!audio_is_playing(song)) {
 	if (global.thick_line) {
 		global.thick_line = false;
 	}
+	global.combo_mult = 1
 	
 	if (my_score - my_my_score >= 0)	
 	{

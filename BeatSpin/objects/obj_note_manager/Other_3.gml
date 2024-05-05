@@ -7,6 +7,7 @@ if (playing) {
 	if (global.thick_line) {
 		global.thick_line = false;
 	}
+	global.combo_mult = 1;
 }
 
 
@@ -19,6 +20,8 @@ file_text_write_string(_file, "\n");
 file_text_write_string(_file, global.offset);
 file_text_write_string(_file, "\n");
 file_text_write_string(_file, global.thick_line);
+file_text_write_string(_file, "\n");
+file_text_write_string(_file, global.combo_mult);
 file_text_write_string(_file, "\n");
 file_text_write_string(_file, global.song_bought);
 file_text_close(_file);

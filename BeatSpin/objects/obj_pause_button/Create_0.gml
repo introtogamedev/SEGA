@@ -22,6 +22,7 @@ function do_something() {
 				global.thick_line = false;
 				show_debug_message(global.thick_line);
 			}
+			global.combo_mult = 1
 			
 			global.money += obj_note_manager.my_score;
 			obj_note_manager.my_score = 0;
@@ -48,6 +49,7 @@ function do_something() {
 			if (global.thick_line) {
 				global.thick_line = false;
 			}
+			global.combo_mult = 1
 			
 			
 		break;
