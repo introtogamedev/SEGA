@@ -1,3 +1,6 @@
+//coin rain thing
+win = false;
+
 function process_notes(_file_name) {
 
 	//Get variables from BSP file
@@ -20,7 +23,7 @@ function process_notes(_file_name) {
 
 	if (file_exists(_file_name+".bsp")) {
 		var _file = file_text_open_read(_file_name+".bsp");
-		show_debug_message(_file_name);
+		//show_debug_message(_file_name);
 		while (!file_text_eof(_file)) {
 			var _line = string_split(file_text_readln(_file),",");
 			var _column = _line[0];
@@ -40,7 +43,7 @@ function process_notes(_file_name) {
 		}
 		file_text_close(_file);
 	} else {
-		show_debug_message("File Missing");
+		//show_debug_message("File Missing");
 	}
 
 }
@@ -66,27 +69,33 @@ Anemone = {
 
 song_data = Metamorphose;
 
+
 function start_song(_difficulty) {
 	switch (_difficulty) {
 		case 1:
-				song = audio_play_sound(song_data.song_name,1,false);
-				process_notes(song_data.easy);
-				difficulty = 0;
+			song = audio_play_sound(song_data.song_name,1,false);
+			process_notes(song_data.easy);
+			difficulty = 0;
+			
 		break;
 		case 2:
-				song = audio_play_sound(song_data.song_name,1,false);
-				process_notes(song_data.medium);
-				difficulty = 1;
+			song = audio_play_sound(song_data.song_name,1,false);
+			process_notes(song_data.medium);
+			difficulty = 1;
+			
 		break;
 		case 3:
-				song = audio_play_sound(song_data.song_name,1,false);
-				process_notes(song_data.hard);
-				difficulty = 2;
+			song = audio_play_sound(song_data.song_name,1,false);
+			process_notes(song_data.hard);
+			difficulty = 2;
+
+			
 		break;
 		case 4:
-				song = audio_play_sound(song_data.song_name,1,false);
-				process_notes(song_data.expert);
-				difficulty = 3;
+			song = audio_play_sound(song_data.song_name,1,false);
+			process_notes(song_data.expert);
+			difficulty = 3;
+				
 		break;
 	}
 	my_my_score = my_score;
