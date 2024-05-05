@@ -19,6 +19,7 @@ if (global.song_bought) {
 		image_index = 0;
 		if (mouse_check_button_released(mb_left) && mouse_x > OBJECT.x && mouse_x < OBJECT.x+OBJECT.sprite_width 
 		&& mouse_y > OBJECT.y && mouse_y < OBJECT.y+OBJECT.sprite_height) {
+			audio_play_sound(snd_button_press,1,false);
 			obj_note_manager.song_data = obj_note_manager.Anemone;
 		}
 		//show_debug_message("metamorphose selected");
