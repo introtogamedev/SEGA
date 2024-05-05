@@ -1,6 +1,6 @@
 //coin falls
 y += 10;
 
-if (y >= obj_height + 30) {
+if (y >= room_height + 30) {
 	instance_destroy();
 }
