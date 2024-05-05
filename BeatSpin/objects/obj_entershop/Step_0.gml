@@ -7,6 +7,7 @@ if (!obj_note_manager.playing) {
 		image_index = 1;
 		if (mouse_check_button_released(mb_left)) {
 			global.in_shop = true;
+			obj_speech_bubble.random_dia = irandom(2);
 			visible = false;
 			audio_play_sound(snd_button_press,1,false);
 		}
