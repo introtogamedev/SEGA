@@ -5,6 +5,7 @@ if (playing && !global.is_paused) {
 
 if (keyboard_check_pressed(vk_escape)) {
 	audio_pause_sound(song);
+	audio_play_sound(snd_pause,1,false);	
 	global.is_paused = true;
 }
 
@@ -676,10 +677,19 @@ if (!ds_list_empty(notes6))
 if (!audio_is_playing(song)) {
 	
 	end_song = true;
-	alarm[0] = game_get_speed(gamespeed_fps) * 5;
+	alarm[0] = game_get_speed(gamespeed_fps) * 10;
 	
-	if (my_score - my_my_score >= 0)	audio_play_sound(snd_money,1,false);
-	else if (my_score - my_my_score < 0)	audio_play_sound(snd_money_lost,1,false);
+	if (my_score - my_my_score >= 0)	
+	{
+		win = true;
+		audio_play_sound(snd_money,1,false);
+	}
+	
+	else if (my_score - my_my_score < 0)
+	{
+		win = false;
+		audio_play_sound(snd_money_lost,1,false);
+	}
 	
 	//Set my_my_score to be used in Draw Gui
 	my_my_score = my_score - my_my_score;

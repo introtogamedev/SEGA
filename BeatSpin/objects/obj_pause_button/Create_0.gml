@@ -1,3 +1,6 @@
+//sound effect thing
+play = false;
+
 //Do correct action based on purpose
 
 function do_something() {

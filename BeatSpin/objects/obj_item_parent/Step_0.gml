@@ -6,7 +6,7 @@ if (mouse_x > x && mouse_x < x+sprite_width && mouse_y > y && mouse_y < y+sprite
 	
 	//show_debug_message(string(global.money));
 	
-	if (mouse_check_button_released(mb_left) && item_bought == false && global.money >= item_cost) {
+	if (mouse_check_button_released(mb_left) && item_bought == false && global.money >= item_cost && !coming_soon) {
 		item_bought = true;
 		audio_play_sound(snd_kaching,1,false);
 		global.money -= item_cost;

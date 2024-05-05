@@ -8,7 +8,7 @@ if (!obj_note_manager.playing) {
 		if (mouse_check_button_released(mb_left)) {
 			global.in_shop = true;
 			visible = false;
-			audio_play_sound(snd_lever_pull,1,false);
+			audio_play_sound(snd_button_press,1,false);
 		}
 	} else {
 		image_index = 0;

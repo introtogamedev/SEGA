@@ -28,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_difficultytitles",
-    "path": "sprites/spr_difficultytitles/spr_difficultytitles.yy",
+    "name": "spr_difficultytitles2",
+    "path": "sprites/spr_difficultytitles2/spr_difficultytitles2.yy",
   },
   "spriteMaskId": null,
   "visible": false,
