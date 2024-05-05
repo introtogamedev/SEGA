@@ -1,6 +1,6 @@
 if (obj_note_manager.end_song && obj_note_manager.win) {
 	
-	show_debug_message("ended");
+	//show_debug_message("ended");
 	
 	timer ++;
 	if (timer >= 5 )
