@@ -679,6 +679,11 @@ if (!audio_is_playing(song)) {
 	end_song = true;
 	alarm[0] = game_get_speed(gamespeed_fps) * 10;
 	
+	if (global.thick_line) {
+		global.thick_line = false;
+	}
+	global.combo_mult = 1
+	
 	if (my_score - my_my_score >= 0)	
 	{
 		win = true;
