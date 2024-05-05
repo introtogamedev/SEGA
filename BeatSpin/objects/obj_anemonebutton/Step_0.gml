@@ -21,7 +21,7 @@ if (global.song_bought) {
 		&& mouse_y > OBJECT.y && mouse_y < OBJECT.y+OBJECT.sprite_height) {
 			obj_note_manager.song_data = obj_note_manager.Anemone;
 		}
-		show_debug_message("metamorphose selected");
+		//show_debug_message("metamorphose selected");
 	} else {
 		image_index = 1;
 	}
