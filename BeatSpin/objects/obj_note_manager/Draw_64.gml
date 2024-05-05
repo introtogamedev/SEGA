@@ -2,10 +2,10 @@
 // You can write your code in this editor
 
 draw_set_color(c_white);
-draw_set_halign(fa_right);
+draw_set_halign(fa_left);
 
 draw_set_font(fnt_casino_fancy);
-draw_text_transformed(130,30,"$" + string(global.money+my_score),0.7,0.7,0);
+draw_text_transformed(15,30,"$" + string(global.money+my_score),0.7,0.7,0);
 
 //show_debug_message(my_score - my_my_score);
 //end
