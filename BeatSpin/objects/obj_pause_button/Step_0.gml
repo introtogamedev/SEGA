@@ -6,7 +6,7 @@ if (!global.is_paused) {
 	visible = true;
 }
 
-if (mouse_x > (x-(1*sprite_width)/2) && mouse_x < (x+(1*sprite_width)/2) && mouse_y > (y-(1*sprite_width)/2) && mouse_y < (y+(1*sprite_width)/2)) 
+if (mouse_x > (x-(1*sprite_width)/2) && mouse_x < (x+(1*sprite_width)/2) && mouse_y > (y-(1*sprite_height)/2) && mouse_y < (y+(1*sprite_height)/2)) 
 {
 	image_alpha = 1;
 }
