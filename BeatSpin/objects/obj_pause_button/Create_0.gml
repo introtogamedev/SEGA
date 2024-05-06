@@ -18,6 +18,12 @@ function do_something() {
 				instance_destroy();
 			}
 			
+			if (global.thick_line) {
+				global.thick_line = false;
+				show_debug_message(global.thick_line);
+			}
+			global.combo_mult = 1
+			
 			global.money += obj_note_manager.my_score;
 			obj_note_manager.my_score = 0;
 			obj_note_manager.start_song(obj_note_manager.difficulty+1);
@@ -39,6 +45,11 @@ function do_something() {
 			with (obj_notes) {
 				instance_destroy();
 			}
+			
+			if (global.thick_line) {
+				global.thick_line = false;
+			}
+			global.combo_mult = 1
 			
 			
 		break;

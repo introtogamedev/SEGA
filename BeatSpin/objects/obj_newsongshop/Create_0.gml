@@ -6,7 +6,7 @@ x_pos = 717;
 y_pos = 223;
 
 
-
+item_cost = 1000;
 
 
 
